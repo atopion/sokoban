@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="SokobanSolver"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SokobanSolver">
+				<Option output="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/SokobanSolver.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\users\atopi\codes\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\users\atopi\codes\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\users\atopi\codes\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\users\atopi\codes\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\users\atopi\codes\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\users\atopi\codes\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\users\atopi\codes\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 SokobanSolver"/>
+					<CompileFile command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SokobanSolver/fast">
+				<Option output="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/SokobanSolver.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\users\atopi\codes\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\users\atopi\codes\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\users\atopi\codes\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\users\atopi\codes\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\users\atopi\codes\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\users\atopi\codes\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\users\atopi\codes\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 SokobanSolver/fast"/>
+					<CompileFile command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/c++/SokobanSolver_ver2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/AStar.cpp">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/AStar.h">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/AssignmentAlgorithms.cpp">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/AssignmentAlgorithms.h">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/DeadlockDetection.cpp">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/DeadlockDetection.h">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/Execution.cpp">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/Execution.h">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/Map.cpp">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/Map.h">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/Metrics.cpp">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/Metrics.h">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/Node.cpp">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/Node.h">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/PlayerPath.cpp">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/PlayerPath.h">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/PlayerPath_old.cpp">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/PlayerPath_old.h">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/TranspositionTable.cpp">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/TranspositionTable.h">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/hungarian/Hungarian.cpp">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/hungarian/Hungarian.h">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/main.cpp">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/Codes/c++/SokobanSolver_ver2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
