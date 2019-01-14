@@ -25,19 +25,19 @@ class BoundAlgorithms:
         pos_t, dist_t = pos, 0
 
         for i in range(0, len(box_array) - b, 1):
+            # TODO distance at box minimum needs to use the before position
+
+
             pos_b, dist_b = BoundAlgorithms.minimum(box_array, matchedBoxes, lambda x : self.metrics.distance(x, pos_t))
             pos_t, dist_t = BoundAlgorithms.minimum(self.targets, matchedTargets, lambda x : self.metrics.distance(x, pos_b))
             matchedBoxes.append(pos_b)
             matchedTargets.append(pos_t)
 
-            a = 2
             if pos_b == -1 or pos_t == -1:
                 print("No more box or target found")
                 break
             else:
                 distance_sum += dist_b + dist_t
-
-            a = 3
 
         return distance_sum
 
@@ -52,3 +52,7 @@ class BoundAlgorithms:
                     _min = func(array[i])
                     pos = array[i]
         return pos, _min
+
+    #@staticmethod
+    #def
+

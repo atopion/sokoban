@@ -1,17 +1,20 @@
 import Map as GameMap
-import AssignmentAlgorithms
+import Metrics
 
 box = lambda x: x == 2
-level = open("level/level1.txt", "r").read()
+level = open("level/test.txt", "r").read()
 
 game_map = GameMap.Map(level)
-map = game_map.getGameMap()
-print("GAME MAP: ", map)
+game_map.mapProduction()
+game_map.mapPrinting()
 
 boxArray = game_map.getBoxArray()
 print("BOX ARRAY: ", boxArray)
 
-print("NEAREST NEIGHBOUR")
+#algo = AssignmentAlgorithms.AssignmentAlgorithms(game_map.width, game_map.height, game_map.targetArray, game_map.getClearedMap())
+#algo.nearestNeighbour(boxArray, 0)
 
-algo = AssignmentAlgorithms.AssignmentAlgorithms(game_map.width, game_map.height, game_map.targetArray, game_map.getClearedMap())
-algo.nearestNeighbour(boxArray, 0)
+metrics = Metrics.Metrics(game_map.width, game_map.height, game_map.getTargetsArray(), game_map.getClearedMap(), Metrics.PULL_METRIC)
+
+print("PLAYER->BOX: ", metrics.distance(7, 16))
+print("BOX->TARGET: ", metrics.distance(13, 19))

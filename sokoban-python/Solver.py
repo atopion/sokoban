@@ -10,7 +10,7 @@ import PlayerPath
 import os
 import time
 
-level_name = "level1.txt"
+level_name = "level3.txt"
 cwd = os.getcwd()
 path = os.path.join(cwd, "level", level_name)
 level = open(path, "r").read()
