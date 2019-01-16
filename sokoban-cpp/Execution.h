@@ -11,6 +11,7 @@
 #include "Map.h"
 #include "AssignmentAlgorithms.h"
 #include "DeadlockDetection.h"
+#include "BoundAlgorithm.h"
 
 class Execution
 {
@@ -21,18 +22,21 @@ private:
     int *clearedMap;
     int size;
     int boxCount;
+    std::list<Node*> openSet;
+
     TranspositionTable transpositionTable;
     AssignmentAlgorithms assignmentAlgorithms;
     DeadlockDetection deadlockDetection;
+    BoundAlgorithm boundAlgorithms;
 
 public:
-    Execution(Map &map);
+    explicit Execution(Map &map);
 
-    Move **possibleMoves(int box, int *box_array);
+    Move **possibleMoves(int pos, int *box_array);
     Node *analyseState(Node *node);
     Node *execute(Node *current_node, int depth=0);
 
-    bool cont(int *array, int size, int item);
+    int cont(int *array, int size, int item);
 
     //DEBUG
     void printDeadlockMap();

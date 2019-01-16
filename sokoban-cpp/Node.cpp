@@ -18,7 +18,7 @@ Node::~Node()
     delete box_array;
 }
 
-Node::Node(int *box_array, int player_pos, Node *farther, Move *move, int lower_bound, const std::list<Node *> &sons)
+Node::Node(int *box_array, int player_pos, Node *farther, Move *move, int lower_bound, const std::list<Node *> &sons, int depth)
 {
     Node::box_array = box_array;
     Node::player_pos = player_pos;
@@ -26,6 +26,7 @@ Node::Node(int *box_array, int player_pos, Node *farther, Move *move, int lower_
     Node::move = move;
     Node::lower_bound = lower_bound;
     Node::sons = sons;
+    Node::depth = depth;
 
     Node::next = nullptr;
 }

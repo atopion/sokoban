@@ -10,7 +10,8 @@
 
 Execution::Execution(Map &map) : transpositionTable(map.getBoxCount(), map.getSize()),
 assignmentAlgorithms(map.getWidth(), map.getHeight(), map.getBoxCount(), map.getTargetsArray(), map.getTargetsCount(), map.getClearedMap()),
-deadlockDetection(map.getClearedMap(), map.getSize(), map.getWidth(), map.getTargetsArray(), map.getTargetsCount())
+deadlockDetection(map.getClearedMap(), map.getSize(), map.getWidth(), map.getTargetsArray(), map.getTargetsCount()),
+boundAlgorithms(map)
 {
     Execution::map = &map;
     Execution::width = map.getWidth();
@@ -18,19 +19,20 @@ deadlockDetection(map.getClearedMap(), map.getSize(), map.getWidth(), map.getTar
     Execution::clearedMap = map.getClearedMap();
     Execution::size = map.getSize();
     Execution::boxCount = map.getBoxCount();
+    Execution::openSet = std::list<Node *>();
 
     Execution::transpositionTable.insert(transpositionTable.computeHash(map.getBoxArray(), map.getPlayer()));
 }
 
-bool Execution::cont(int *array, int size, int item)
+int Execution::cont(int *array, int size, int item)
 {
     for(int i = 0; i < size; i++)
         if(array[i] == item)
-            return true;
-    return false;
+            return i;
+    return -1;
 }
 
-Move **Execution::possibleMoves(int box, int *boxes)
+Move** Execution::possibleMoves(int pos, int *box_array)
 {
     Move **result = new Move*[4];
     for(int i = 0; i < 4; i++)
@@ -39,11 +41,13 @@ Move **Execution::possibleMoves(int box, int *boxes)
     int i = 0;
     for(int a : {-1, 1, -width, width})
     {
-        if(0 <= (box + a) <= size && clearedMap[box + a] != 4 && clearedMap[box - a] != 4 && !cont(boxes, map->getBoxCount(), box + a)
-            && !cont(boxes, map->getBoxCount(), box - a) && !deadlockDetection.lookup(box + a))
-            *result[i++] = {.from = box, .to = box + a};
+        if(clearedMap[pos + a] != 4 && pos >= 0 && pos < size && !(cont(box_array, boxCount, pos + a) != -1 &&
+        (cont(box_array, boxCount, pos + 2*a) != -1 || clearedMap[pos + 2*a] == 4)) &&
+        !(cont(box_array, boxCount, pos + a) != -1 && deadlockDetection.lookup(pos + 2*a)))
+            *result[i] = {.from = pos, .to = pos + a};
         else
-            *result[i++] = {0, 0};
+            *result[i] = {0, 0};
+        ++i;
     }
     return result;
 }
@@ -51,61 +55,44 @@ Move **Execution::possibleMoves(int box, int *boxes)
 Node *Execution::analyseState(Node *node)
 {
     int *box_array = node->box_array;
-    int *vi = new int[size];
+    int pos = node->player_pos;
 
     for(int i = 0; i < boxCount; i++)
     {
-        Move **m = possibleMoves(box_array[i], box_array);
+        Move **m = possibleMoves(pos, box_array);
         for(int j = 0; j < 4; j++)
         {
             if(m[j]->to == 0 && m[j]->from == 0)
                 continue;
 
-            if(deadlockDetection.lookup(m[j]->to))
-                continue;
-
-            if(!map->canReach(vi, box_array, node->player_pos, m[j]->from - (m[j]->to - m[j]->from)))
-                continue;
-
             int *new_box_array = new int[boxCount];
             for(int k = 0; k < boxCount; k++)
-                new_box_array[k] = box_array[k];
-            new_box_array[i] = m[j]->to;
-            int pos = map->normalizedPlayerPosition(vi, new_box_array, m[j]->from);
+                if(box_array[k] == m[j]->to)
+                    new_box_array[k] = 2*m[j]->to - m[j]->from;
+                else
+                    new_box_array[k] = box_array[k];
 
-            if(transpositionTable.lookup(transpositionTable.computeHash(new_box_array, pos)))
+            if(transpositionTable.lookup(transpositionTable.computeHash(new_box_array, m[j]->to)))
                 continue;
-            transpositionTable.insert(transpositionTable.computeHash(new_box_array, pos));
+            transpositionTable.insert(transpositionTable.computeHash(new_box_array, m[j]->to));
 
-            int bound = assignmentAlgorithms.hungarianAssignment(new_box_array);
+            int bound = boundAlgorithms.greedyBound(new_box_array, m[j]->to);
+            //std::cout << "MOVE: " << Move::str(*m[j]) << "  BOUND: " << bound << std::endl;
+
 
             Node* n = new Node;
             n->box_array = new_box_array;
-            n->player_pos = m[j]->from;
+            n->player_pos = m[j]->to;
             n->farther = node;
             n->move = m[j];
             n->lower_bound = bound;
             n->sons = std::list<Node*>();
+            n->depth = node->depth+1;
 
             if(bound == 0)
             {
-                delete[] vi;
                 return n;
             }
-
-#ifndef QUICK_SOLUTION
-            std::list<Node *>::iterator it;
-            for(it = node->sons.begin(); it != node->sons.end(); it++)
-            {
-                if(bound < (*it)->lower_bound)
-                {
-                    node->sons.insert(it, n);
-                    goto inserted;  // Dont append if already added
-                }
-            }
-            node->sons.push_back(n);
-            inserted:;
-#else
 
             node->sons.push_back(n);
             if(bound < node->lower_bound)
@@ -114,44 +101,39 @@ Node *Execution::analyseState(Node *node)
                 if(res != nullptr)
                     return res;
             }
-#endif
+            else
+            {
+                for(auto it = openSet.begin(); it != openSet.end(); it++)
+                {
+                    if(bound + n->depth < (*it)->lower_bound + (*it)->depth)
+                    {
+                        openSet.insert(it, n);
+                        goto done;
+                    }
+                }
+                openSet.push_back(n);
+                done:
+                int a;
+            }
         }
         delete[] m;
     }
-    delete[] vi;
     return nullptr;
 }
 
 Node *Execution::execute(Node *current_node, int depth)
 {
-    Node *res = analyseState(current_node);
+    std::cout << "EXECUTION" << std::endl;
 
-    if(res != nullptr)
+    openSet.push_front(current_node);
+    while(!openSet.empty())
     {
-        std::cout << "Final depth: " << depth << std::endl;
-        return res;
-    }
-    if(current_node->sons.empty())
-    {
-        return nullptr;
-    }
-    if(depth >= 2000)
-    {
-        std::cout << "Maximum depth reached. Aborting." << std::endl;
-        return nullptr;
+        current_node = openSet.front(); openSet.pop_front();
+        Node* res = analyseState(current_node);
+        if(res != nullptr)
+            return res;
     }
 
-#ifndef QUICK_SOLUTION
-    std::list<Node *>::iterator it;
-    for(it = current_node->sons.begin(); it != current_node->sons.end(); it++)
-    {
-        Node *r = execute(*it, depth +1);
-        if(r != nullptr)
-            return r;
-        else
-            delete r;
-    }
-#endif
     return nullptr;
 }
 

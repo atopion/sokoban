@@ -10,6 +10,7 @@ class Metrics
 private:
     int width;
     int height;
+    int size;
     int targets_count;
 
     int *target_codes;

@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\atopi\Codes\c++\SokobanSolver_ver2
+CMAKE_SOURCE_DIR = C:\Users\atopi\Codes\sokoban\sokoban-cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\atopi\Codes\c++\SokobanSolver_ver2\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\atopi\Codes\sokoban\sokoban-cpp\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\atopi\Codes\c++\SokobanSolver_ver2\cmake-build-debug\CMakeFiles C:\Users\atopi\Codes\c++\SokobanSolver_ver2\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\atopi\Codes\sokoban\sokoban-cpp\cmake-build-debug\CMakeFiles C:\Users\atopi\Codes\sokoban\sokoban-cpp\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\atopi\Codes\c++\SokobanSolver_ver2\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\atopi\Codes\sokoban\sokoban-cpp\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -175,6 +175,33 @@ AssignmentAlgorithms.s: AssignmentAlgorithms.cpp.s
 AssignmentAlgorithms.cpp.s:
 	$(MAKE) -f CMakeFiles\SokobanSolver.dir\build.make CMakeFiles/SokobanSolver.dir/AssignmentAlgorithms.cpp.s
 .PHONY : AssignmentAlgorithms.cpp.s
+
+BoundAlgorithm.obj: BoundAlgorithm.cpp.obj
+
+.PHONY : BoundAlgorithm.obj
+
+# target to build an object file
+BoundAlgorithm.cpp.obj:
+	$(MAKE) -f CMakeFiles\SokobanSolver.dir\build.make CMakeFiles/SokobanSolver.dir/BoundAlgorithm.cpp.obj
+.PHONY : BoundAlgorithm.cpp.obj
+
+BoundAlgorithm.i: BoundAlgorithm.cpp.i
+
+.PHONY : BoundAlgorithm.i
+
+# target to preprocess a source file
+BoundAlgorithm.cpp.i:
+	$(MAKE) -f CMakeFiles\SokobanSolver.dir\build.make CMakeFiles/SokobanSolver.dir/BoundAlgorithm.cpp.i
+.PHONY : BoundAlgorithm.cpp.i
+
+BoundAlgorithm.s: BoundAlgorithm.cpp.s
+
+.PHONY : BoundAlgorithm.s
+
+# target to generate assembly for a file
+BoundAlgorithm.cpp.s:
+	$(MAKE) -f CMakeFiles\SokobanSolver.dir\build.make CMakeFiles/SokobanSolver.dir/BoundAlgorithm.cpp.s
+.PHONY : BoundAlgorithm.cpp.s
 
 DeadlockDetection.obj: DeadlockDetection.cpp.obj
 
@@ -311,60 +338,6 @@ Node.cpp.s:
 	$(MAKE) -f CMakeFiles\SokobanSolver.dir\build.make CMakeFiles/SokobanSolver.dir/Node.cpp.s
 .PHONY : Node.cpp.s
 
-PlayerPath.obj: PlayerPath.cpp.obj
-
-.PHONY : PlayerPath.obj
-
-# target to build an object file
-PlayerPath.cpp.obj:
-	$(MAKE) -f CMakeFiles\SokobanSolver.dir\build.make CMakeFiles/SokobanSolver.dir/PlayerPath.cpp.obj
-.PHONY : PlayerPath.cpp.obj
-
-PlayerPath.i: PlayerPath.cpp.i
-
-.PHONY : PlayerPath.i
-
-# target to preprocess a source file
-PlayerPath.cpp.i:
-	$(MAKE) -f CMakeFiles\SokobanSolver.dir\build.make CMakeFiles/SokobanSolver.dir/PlayerPath.cpp.i
-.PHONY : PlayerPath.cpp.i
-
-PlayerPath.s: PlayerPath.cpp.s
-
-.PHONY : PlayerPath.s
-
-# target to generate assembly for a file
-PlayerPath.cpp.s:
-	$(MAKE) -f CMakeFiles\SokobanSolver.dir\build.make CMakeFiles/SokobanSolver.dir/PlayerPath.cpp.s
-.PHONY : PlayerPath.cpp.s
-
-PlayerPath_old.obj: PlayerPath_old.cpp.obj
-
-.PHONY : PlayerPath_old.obj
-
-# target to build an object file
-PlayerPath_old.cpp.obj:
-	$(MAKE) -f CMakeFiles\SokobanSolver.dir\build.make CMakeFiles/SokobanSolver.dir/PlayerPath_old.cpp.obj
-.PHONY : PlayerPath_old.cpp.obj
-
-PlayerPath_old.i: PlayerPath_old.cpp.i
-
-.PHONY : PlayerPath_old.i
-
-# target to preprocess a source file
-PlayerPath_old.cpp.i:
-	$(MAKE) -f CMakeFiles\SokobanSolver.dir\build.make CMakeFiles/SokobanSolver.dir/PlayerPath_old.cpp.i
-.PHONY : PlayerPath_old.cpp.i
-
-PlayerPath_old.s: PlayerPath_old.cpp.s
-
-.PHONY : PlayerPath_old.s
-
-# target to generate assembly for a file
-PlayerPath_old.cpp.s:
-	$(MAKE) -f CMakeFiles\SokobanSolver.dir\build.make CMakeFiles/SokobanSolver.dir/PlayerPath_old.cpp.s
-.PHONY : PlayerPath_old.cpp.s
-
 TranspositionTable.obj: TranspositionTable.cpp.obj
 
 .PHONY : TranspositionTable.obj
@@ -461,6 +434,9 @@ help:
 	@echo ... AssignmentAlgorithms.obj
 	@echo ... AssignmentAlgorithms.i
 	@echo ... AssignmentAlgorithms.s
+	@echo ... BoundAlgorithm.obj
+	@echo ... BoundAlgorithm.i
+	@echo ... BoundAlgorithm.s
 	@echo ... DeadlockDetection.obj
 	@echo ... DeadlockDetection.i
 	@echo ... DeadlockDetection.s
@@ -476,12 +452,6 @@ help:
 	@echo ... Node.obj
 	@echo ... Node.i
 	@echo ... Node.s
-	@echo ... PlayerPath.obj
-	@echo ... PlayerPath.i
-	@echo ... PlayerPath.s
-	@echo ... PlayerPath_old.obj
-	@echo ... PlayerPath_old.i
-	@echo ... PlayerPath_old.s
 	@echo ... TranspositionTable.obj
 	@echo ... TranspositionTable.i
 	@echo ... TranspositionTable.s

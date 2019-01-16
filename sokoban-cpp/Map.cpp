@@ -66,7 +66,6 @@ void Map::mapProduction()
                 if(tmp > width)
                     width = tmp;
                 tmp = 0;
-                printf("\n");
                 break;
 
             default:

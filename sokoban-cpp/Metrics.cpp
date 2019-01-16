@@ -11,18 +11,19 @@ Metrics::Metrics(int width, int height, int *targets, int targets_count, int *cl
 {
     Metrics::width = width;
     Metrics::height = height;
+    Metrics::size = width*height;
     Metrics::targets_count = targets_count;
     Metrics::target_codes = new int[targets_count];
 
-    Metrics::distance_to_goals = new int*[targets_count];
-    for(int i = 0; i < targets_count; i++)
+    Metrics::distance_to_goals = new int*[size];
+    for(int i = 0; i < size; i++)
     {
-        Metrics::distance_to_goals[i] = new int[width*height];
-        for(int j = 0; j < width*height; j++)
+        Metrics::distance_to_goals[i] = new int[size];
+        for(int j = 0; j < size; j++)
             Metrics::distance_to_goals[i][j] = 32000;
     }
 
-    std::queue<int> target_queue = std::queue<int>();
+    /*std::queue<int> target_queue = std::queue<int>();
 
     for(int i = 0; i < targets_count; i++)
     {
@@ -44,12 +45,35 @@ Metrics::Metrics(int width, int height, int *targets, int targets_count, int *cl
                 }
             }
         }
+    }*/
+
+    std::queue<int> mqueue = std::queue<int>();
+    for(int i = 0; i < size; i++)
+    {
+        distance_to_goals[i][i] = 0;
+        mqueue.push(i);
+
+        while(!mqueue.empty())
+        {
+            int position = mqueue.front(); mqueue.pop();
+            for(int d : {-1, 1, -width, width})
+            {
+                int player_pos = position + d;
+                if(player_pos < 0 || player_pos >= size)
+                    continue;
+                if(distance_to_goals[i][player_pos] == 32000 && clearedBoard[player_pos] != 4)
+                {
+                    distance_to_goals[i][player_pos] = distance_to_goals[i][position] +1;
+                    mqueue.push(player_pos);
+                }
+            }
+        }
     }
 }
 
 Metrics::~Metrics()
 {
-    for(int i = 0; i < targets_count; i++)
+    for(int i = 0; i < size; i++)
         delete distance_to_goals[i];
     delete distance_to_goals;
 }
@@ -75,5 +99,5 @@ int Metrics::lookupTarget(int target)
 
 int Metrics::pull_distance(int target, int pos)
 {
-    return Metrics::distance_to_goals[lookupTarget(target)][pos];
+    return Metrics::distance_to_goals[target][pos];
 }

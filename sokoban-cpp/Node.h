@@ -18,9 +18,10 @@ public:
     Node *next;
     Move *move;
     int lower_bound;
+    int depth;
     std::list<Node *> sons;
 
-    Node(int *box_array, int player_pos, Node *farther, Move *move, int lower_bound, const std::list<Node *> &sons = std::list<Node *>());
+    Node(int *box_array, int player_pos, Node *farther, Move *move, int lower_bound, const std::list<Node *> &sons = std::list<Node *>(), int depth = 0);
     Node();
     ~Node();
 };
