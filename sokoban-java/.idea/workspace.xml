@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66994118-cbfb-403a-b8a4-7bce6c6ac529" name="Default" comment="Initial Commit">
+      <change afterPath="$PROJECT_DIR$/../sokoban-cpp/level/level6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-cpp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-cpp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-cpp/Execution.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-cpp/Execution.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-cpp/Map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-cpp/Map.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-cpp/cmake-build-debug/SokobanSolver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-cpp/cmake-build-debug/SokobanSolver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-cpp/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-cpp/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SokobanRobot/distanceboard/Viewer$Move.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SokobanRobot/distanceboard/Viewer$Move.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SokobanRobot/distanceboard/Viewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SokobanRobot/distanceboard/Viewer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/distanceboard/Viewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/distanceboard/Viewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-python/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-python/Metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-python/Metrics.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/distanceboard/grid/GridCell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2771">
-              <caret line="197" column="29" selection-start-line="197" selection-start-column="29" selection-end-line="197" selection-end-column="29" />
+            <state relative-caret-position="2737">
+              <caret line="195" column="5" selection-start-line="195" selection-start-column="5" selection-end-line="195" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/distanceboard/Viewer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="222" column="27" selection-start-line="222" selection-start-column="27" selection-end-line="222" selection-end-column="27" />
+            <state relative-caret-position="171">
+              <caret line="184" column="48" selection-start-line="184" selection-start-column="48" selection-end-line="184" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,7 +107,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -125,37 +135,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="SokobanRobot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SokobanRobot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SokobanRobot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SokobanRobot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SokobanRobot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SokobanRobot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="distanceboard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SokobanRobot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SokobanRobot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="distanceboard" type="462c0819:PsiDirectoryNode" />
-              <item name="grid" type="462c0819:PsiDirectoryNode" />
+              <item name="sokoban-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sokoban-java" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -279,6 +271,8 @@
       <workItem from="1544384169389" duration="1641000" />
       <workItem from="1544798977899" duration="2536000" />
       <workItem from="1544826164952" duration="102000" />
+      <workItem from="1547712190610" duration="1236000" />
+      <workItem from="1547719155285" duration="220000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1540903197470</created>
@@ -291,12 +285,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65602000" />
+    <option name="totallyTimeSpent" value="67058000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32852232" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33814433" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -364,8 +359,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/distanceboard/grid/GridCell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2771">
-          <caret line="197" column="29" selection-start-line="197" selection-start-column="29" selection-end-line="197" selection-end-column="29" />
+        <state relative-caret-position="2737">
+          <caret line="195" column="5" selection-start-line="195" selection-start-column="5" selection-end-line="195" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -384,8 +379,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/distanceboard/Viewer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="222" column="27" selection-start-line="222" selection-start-column="27" selection-end-line="222" selection-end-column="27" />
+        <state relative-caret-position="171">
+          <caret line="184" column="48" selection-start-line="184" selection-start-column="48" selection-end-line="184" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

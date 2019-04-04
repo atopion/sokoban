@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b82f55c6-206e-4ebb-a034-d74ab4b842e7" name="Default Changelist" comment="" />
+    <list default="true" id="b82f55c6-206e-4ebb-a034-d74ab4b842e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/sokoban-cpp/level/level6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sokoban-cpp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sokoban-cpp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sokoban-cpp/Execution.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sokoban-cpp/Execution.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sokoban-cpp/Map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sokoban-cpp/Map.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sokoban-cpp/cmake-build-debug/SokobanSolver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/sokoban-cpp/cmake-build-debug/SokobanSolver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sokoban-cpp/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sokoban-cpp/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sokoban-python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sokoban-python/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sokoban-python/Metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/sokoban-python/Metrics.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +34,24 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="sokoban" type="b2602c69:ProjectViewProjectNode" />
               <item name="sokoban" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sokoban" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sokoban" type="462c0819:PsiDirectoryNode" />
+              <item name="sokoban-java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sokoban" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sokoban" type="462c0819:PsiDirectoryNode" />
+              <item name="sokoban-java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -39,7 +61,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sokoban-java" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -68,6 +91,8 @@
       <updated>1547062909485</updated>
       <workItem from="1547062912329" duration="497000" />
       <workItem from="1547063428230" duration="14000" />
+      <workItem from="1547629275007" duration="225000" />
+      <workItem from="1547712142475" duration="41000" />
     </task>
     <task id="LOCAL-00001" summary="Improved">
       <created>1547062993328</created>
@@ -80,14 +105,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="511000" />
+    <option name="totallyTimeSpent" value="777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25292096" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25979382" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -106,6 +135,11 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Palette" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">

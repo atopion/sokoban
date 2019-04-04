@@ -1,0 +1,230 @@
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+flatten (Flatten)            (None, 100)               0         
+_________________________________________________________________
+dense (Dense)                (None, 180)               18180     
+_________________________________________________________________
+dropout (Dropout)            (None, 180)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 180)               32580     
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 180)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 180)               32580     
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 180)               0         
+_________________________________________________________________
+dense_3 (Dense)              (None, 100)               18100     
+_________________________________________________________________
+dropout_3 (Dropout)          (None, 100)               0         
+_________________________________________________________________
+dense_4 (Dense)              (None, 30)                3030      
+_________________________________________________________________
+dropout_4 (Dropout)          (None, 30)                0         
+_________________________________________________________________
+dense_5 (Dense)              (None, 4)                 124       
+=================================================================
+Total params: 104,594
+Trainable params: 104,594
+Non-trainable params: 0
+_________________________________________________________________
+Iteration:  1
+Train on 95499 samples, validate on 4000 samples
+Epoch 1/20
+ - 18s - loss: 1.3899 - acc: 0.2595 - val_loss: 1.3836 - val_acc: 0.2740
+Epoch 2/20
+ - 18s - loss: 1.3851 - acc: 0.2633 - val_loss: 1.3836 - val_acc: 0.2740
+Epoch 3/20
+ - 19s - loss: 1.3851 - acc: 0.2626 - val_loss: 1.3842 - val_acc: 0.2630
+Epoch 4/20
+ - 18s - loss: 1.3850 - acc: 0.2624 - val_loss: 1.3839 - val_acc: 0.2740
+Epoch 5/20
+
+Epoch 00005: saving model to model/run15/
+ - 18s - loss: 1.3787 - acc: 0.2891 - val_loss: 1.3738 - val_acc: 0.3067
+Epoch 6/20
+ - 18s - loss: 1.3728 - acc: 0.3048 - val_loss: 1.3732 - val_acc: 0.3103
+Epoch 7/20
+ - 18s - loss: 1.3711 - acc: 0.3053 - val_loss: 1.3684 - val_acc: 0.3133
+Epoch 8/20
+ - 17s - loss: 1.3702 - acc: 0.3073 - val_loss: 1.3656 - val_acc: 0.3150
+Epoch 9/20
+ - 19s - loss: 1.3680 - acc: 0.3107 - val_loss: 1.3618 - val_acc: 0.3183
+Epoch 10/20
+
+Epoch 00010: saving model to model/run15/
+ - 18s - loss: 1.3606 - acc: 0.3216 - val_loss: 1.3527 - val_acc: 0.3355
+Epoch 11/20
+ - 17s - loss: 1.3552 - acc: 0.3284 - val_loss: 1.3471 - val_acc: 0.3475
+Epoch 12/20
+ - 18s - loss: 1.3526 - acc: 0.3330 - val_loss: 1.3601 - val_acc: 0.3340
+Epoch 13/20
+ - 19s - loss: 1.3520 - acc: 0.3307 - val_loss: 1.3478 - val_acc: 0.3358
+Epoch 14/20
+ - 18s - loss: 1.3512 - acc: 0.3342 - val_loss: 1.3464 - val_acc: 0.3425
+Epoch 15/20
+
+Epoch 00015: saving model to model/run15/
+ - 18s - loss: 1.3497 - acc: 0.3334 - val_loss: 1.3518 - val_acc: 0.3390
+Epoch 16/20
+ - 17s - loss: 1.3486 - acc: 0.3349 - val_loss: 1.3508 - val_acc: 0.3305
+Epoch 17/20
+ - 17s - loss: 1.3467 - acc: 0.3367 - val_loss: 1.3399 - val_acc: 0.3410
+Epoch 18/20
+ - 17s - loss: 1.3461 - acc: 0.3355 - val_loss: 1.3422 - val_acc: 0.3402
+Epoch 19/20
+ - 20s - loss: 1.3453 - acc: 0.3369 - val_loss: 1.3433 - val_acc: 0.3483
+Epoch 20/20
+
+Epoch 00020: saving model to model/run15/
+ - 18s - loss: 1.3436 - acc: 0.3377 - val_loss: 1.3394 - val_acc: 0.3447
+
+
+Iteration:  2
+Train on 95499 samples, validate on 4000 samples
+Epoch 1/20
+ - 18s - loss: 1.3439 - acc: 0.3367 - val_loss: 1.3361 - val_acc: 0.3470
+Epoch 2/20
+ - 18s - loss: 1.3433 - acc: 0.3406 - val_loss: 1.3447 - val_acc: 0.3410
+Epoch 3/20
+ - 18s - loss: 1.3420 - acc: 0.3394 - val_loss: 1.3370 - val_acc: 0.3450
+Epoch 4/20
+ - 18s - loss: 1.3418 - acc: 0.3400 - val_loss: 1.3381 - val_acc: 0.3413
+Epoch 5/20
+
+Epoch 00005: saving model to model/run15/
+ - 18s - loss: 1.3409 - acc: 0.3387 - val_loss: 1.3371 - val_acc: 0.3408
+Epoch 6/20
+ - 18s - loss: 1.3398 - acc: 0.3412 - val_loss: 1.3332 - val_acc: 0.3397
+Epoch 7/20
+ - 20s - loss: 1.3392 - acc: 0.3401 - val_loss: 1.3393 - val_acc: 0.3417
+Epoch 8/20
+ - 18s - loss: 1.3383 - acc: 0.3396 - val_loss: 1.3403 - val_acc: 0.3212
+Epoch 9/20
+ - 17s - loss: 1.3376 - acc: 0.3409 - val_loss: 1.3335 - val_acc: 0.3438
+Epoch 10/20
+
+Epoch 00010: saving model to model/run15/
+ - 18s - loss: 1.3372 - acc: 0.3400 - val_loss: 1.3302 - val_acc: 0.3420
+Epoch 11/20
+ - 18s - loss: 1.3362 - acc: 0.3440 - val_loss: 1.3310 - val_acc: 0.3390
+Epoch 12/20
+ - 18s - loss: 1.3365 - acc: 0.3418 - val_loss: 1.3311 - val_acc: 0.3435
+Epoch 13/20
+ - 20s - loss: 1.3353 - acc: 0.3427 - val_loss: 1.3309 - val_acc: 0.3417
+Epoch 14/20
+ - 18s - loss: 1.3350 - acc: 0.3410 - val_loss: 1.3291 - val_acc: 0.3420
+Epoch 15/20
+
+Epoch 00015: saving model to model/run15/
+ - 18s - loss: 1.3340 - acc: 0.3422 - val_loss: 1.3274 - val_acc: 0.3475
+Epoch 16/20
+ - 18s - loss: 1.3327 - acc: 0.3437 - val_loss: 1.3272 - val_acc: 0.3428
+Epoch 17/20
+ - 18s - loss: 1.3318 - acc: 0.3439 - val_loss: 1.3276 - val_acc: 0.3352
+Epoch 18/20
+ - 18s - loss: 1.3314 - acc: 0.3434 - val_loss: 1.3286 - val_acc: 0.3440
+Epoch 19/20
+ - 18s - loss: 1.3303 - acc: 0.3443 - val_loss: 1.3270 - val_acc: 0.3415
+Epoch 20/20
+
+Epoch 00020: saving model to model/run15/
+ - 18s - loss: 1.3297 - acc: 0.3454 - val_loss: 1.3277 - val_acc: 0.3388
+
+
+Iteration:  3
+Train on 95499 samples, validate on 4000 samples
+Epoch 1/20
+ - 18s - loss: 1.3287 - acc: 0.3465 - val_loss: 1.3160 - val_acc: 0.3632
+Epoch 2/20
+ - 18s - loss: 1.3286 - acc: 0.3462 - val_loss: 1.3173 - val_acc: 0.3582
+Epoch 3/20
+ - 19s - loss: 1.3271 - acc: 0.3459 - val_loss: 1.3137 - val_acc: 0.3610
+Epoch 4/20
+ - 19s - loss: 1.3258 - acc: 0.3460 - val_loss: 1.3229 - val_acc: 0.3517
+Epoch 5/20
+
+Epoch 00005: saving model to model/run15/
+ - 19s - loss: 1.3246 - acc: 0.3490 - val_loss: 1.3168 - val_acc: 0.3600
+Epoch 6/20
+ - 19s - loss: 1.3239 - acc: 0.3476 - val_loss: 1.3210 - val_acc: 0.3553
+Epoch 7/20
+ - 19s - loss: 1.3213 - acc: 0.3485 - val_loss: 1.3215 - val_acc: 0.3473
+Epoch 8/20
+ - 19s - loss: 1.3208 - acc: 0.3521 - val_loss: 1.3148 - val_acc: 0.3663
+Epoch 9/20
+ - 19s - loss: 1.3186 - acc: 0.3518 - val_loss: 1.3155 - val_acc: 0.3600
+Epoch 10/20
+
+Epoch 00010: saving model to model/run15/
+ - 19s - loss: 1.3192 - acc: 0.3529 - val_loss: 1.3077 - val_acc: 0.3625
+Epoch 11/20
+ - 19s - loss: 1.3170 - acc: 0.3545 - val_loss: 1.3106 - val_acc: 0.3700
+Epoch 12/20
+ - 18s - loss: 1.3153 - acc: 0.3554 - val_loss: 1.3138 - val_acc: 0.3652
+Epoch 13/20
+ - 18s - loss: 1.3142 - acc: 0.3577 - val_loss: 1.3097 - val_acc: 0.3643
+Epoch 14/20
+ - 19s - loss: 1.3137 - acc: 0.3589 - val_loss: 1.3082 - val_acc: 0.3778
+Epoch 15/20
+
+Epoch 00015: saving model to model/run15/
+ - 19s - loss: 1.3128 - acc: 0.3576 - val_loss: 1.3035 - val_acc: 0.3697
+Epoch 16/20
+ - 19s - loss: 1.3112 - acc: 0.3599 - val_loss: 1.3040 - val_acc: 0.3710
+Epoch 17/20
+ - 18s - loss: 1.3107 - acc: 0.3604 - val_loss: 1.3016 - val_acc: 0.3717
+Epoch 18/20
+ - 18s - loss: 1.3093 - acc: 0.3601 - val_loss: 1.3004 - val_acc: 0.3725
+Epoch 19/20
+ - 18s - loss: 1.3084 - acc: 0.3618 - val_loss: 1.3016 - val_acc: 0.3767
+Epoch 20/20
+
+Epoch 00020: saving model to model/run15/
+ - 18s - loss: 1.3070 - acc: 0.3615 - val_loss: 1.3068 - val_acc: 0.3573
+
+
+Iteration:  1
+ - 0s - loss: 1.3936 - acc: 0.3262
+	Accuracy:  0.3262136   Loss:  1.3935898678974041 
+
+Iteration:  2
+ - 0s - loss: 1.3936 - acc: 0.3262
+	Accuracy:  0.3262136   Loss:  1.3935898912763132 
+
+Iteration:  3
+ - 0s - loss: 1.3936 - acc: 0.3262
+	Accuracy:  0.3262136   Loss:  1.3935898783137497 
+
+Iteration:  4
+ - 0s - loss: 1.3936 - acc: 0.3262
+	Accuracy:  0.3262136   Loss:  1.3935898748416344 
+
+Iteration:  5
+ - 0s - loss: 1.3936 - acc: 0.3262
+	Accuracy:  0.3262136   Loss:  1.3935898947484284 
+
+Iteration:  6
+ - 0s - loss: 1.3936 - acc: 0.3262
+	Accuracy:  0.3262136   Loss:  1.3935898750731088 
+
+Iteration:  7
+ - 0s - loss: 1.3936 - acc: 0.3262
+	Accuracy:  0.3262136   Loss:  1.393589903081505 
+
+Iteration:  8
+ - 0s - loss: 1.3936 - acc: 0.3262
+	Accuracy:  0.3262136   Loss:  1.393589887109775 
+
+Iteration:  9
+ - 0s - loss: 1.3936 - acc: 0.3262
+	Accuracy:  0.3262136   Loss:  1.3935898986834925 
+
+Iteration:  10
+ - 0s - loss: 1.3936 - acc: 0.3262
+	Accuracy:  0.3262136   Loss:  1.3935898706750962 
+
+
+
+Total Accuracy:  0.3262135982513428    Total Loss:  1.393589884170051

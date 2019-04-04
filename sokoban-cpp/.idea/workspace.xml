@@ -11,33 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2230052e-a302-4ca1-bcba-0828190e3c04" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BoundAlgorithm.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BoundAlgorithm.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Execution.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Execution.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Execution.h" beforeDir="false" afterPath="$PROJECT_DIR$/Execution.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Map.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Metrics.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Metrics.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Metrics.h" beforeDir="false" afterPath="$PROJECT_DIR$/Metrics.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Node.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Node.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Node.h" beforeDir="false" afterPath="$PROJECT_DIR$/Node.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlayerPath.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlayerPath.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlayerPath_old.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlayerPath_old.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/SokobanSolver.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/SokobanSolver.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/SokobanSolver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/SokobanSolver.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sokoban-python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-python/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sokoban-python/Metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-python/Metrics.py" afterDir="false" />
-    </list>
+    <list default="true" id="2230052e-a302-4ca1-bcba-0828190e3c04" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,33 +23,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Execution.cpp">
+        <entry file="file://$PROJECT_DIR$/perceptron/Perceptron.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="124" column="1" selection-start-line="124" selection-start-column="1" selection-end-line="124" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Node.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="1581">
+              <caret line="93" column="24" selection-start-line="93" selection-start-column="24" selection-end-line="93" selection-end-column="24" />
               <folding>
-                <element signature="e#102#119#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Execution.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-              <folding>
-                <element signature="e#112#129#0" expanded="true" />
+                <element signature="e#42#61#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,33 +37,65 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+            <state relative-caret-position="452">
+              <caret line="96" column="63" selection-start-line="96" selection-start-column="63" selection-end-line="96" selection-end-column="63" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#367#395#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoundAlgorithm.cpp">
+        <entry file="file://$PROJECT_DIR$/perceptron/Perceptron.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+            <state relative-caret-position="918">
+              <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoundAlgorithm.h">
+        <entry file="file://$PROJECT_DIR$/Execution.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-              <folding>
-                <element signature="e#122#137#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1071">
+              <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Execution.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Map.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Map.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2805">
+              <caret line="165" selection-start-line="165" selection-end-line="165" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../TensorflowTest/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3128">
+              <caret line="184" column="13" selection-start-line="184" selection-start-column="13" selection-end-line="184" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -127,6 +112,7 @@
       <find>path[i]</find>
       <find>path[i-1]</find>
       <find>old</find>
+      <find>\\</find>
     </findStrings>
     <replaceStrings>
       <replace>&amp;&amp;</replace>
@@ -136,6 +122,7 @@
       <replace>it</replace>
       <replace>old</replace>
       <replace>std::prev(it)</replace>
+      <replace>\</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -144,12 +131,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Map1.h" />
-        <option value="$PROJECT_DIR$/TranspositionTable.h" />
         <option value="$PROJECT_DIR$/AssignmentAlgorithms.h" />
         <option value="$PROJECT_DIR$/hungarian/testMain.cpp" />
-        <option value="$PROJECT_DIR$/Map.h" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Move.cpp" />
         <option value="$PROJECT_DIR$/Move.h" />
         <option value="$PROJECT_DIR$/DeadlockDetection.h" />
@@ -167,20 +150,46 @@
         <option value="$PROJECT_DIR$/Metrics.h" />
         <option value="$PROJECT_DIR$/Metrics.cpp" />
         <option value="$PROJECT_DIR$/BoundAlgorithm.h" />
-        <option value="$PROJECT_DIR$/BoundAlgorithm.cpp" />
-        <option value="$PROJECT_DIR$/Map.cpp" />
         <option value="$PROJECT_DIR$/Node.cpp" />
-        <option value="$PROJECT_DIR$/Execution.h" />
         <option value="$PROJECT_DIR$/Node.h" />
+        <option value="$PROJECT_DIR$/level/level6.txt" />
+        <option value="$PROJECT_DIR$/BoundAlgorithm.cpp" />
+        <option value="$PROJECT_DIR$/level/level7.txt" />
+        <option value="$PROJECT_DIR$/perceptrons/levels/level3.txt" />
+        <option value="$PROJECT_DIR$/perceptrons/levels/level2.txt" />
+        <option value="$PROJECT_DIR$/fast_solv.cpp" />
+        <option value="$PROJECT_DIR$/perceptrons/levels/level1.txt" />
+        <option value="$PROJECT_DIR$/perceptrons/TrainingData.h" />
+        <option value="$PROJECT_DIR$/perceptrons/RunningMap.h" />
+        <option value="$PROJECT_DIR$/perceptrons/RunningMap.cpp" />
+        <option value="$PROJECT_DIR$/perceptrons/levels/level130.txt" />
+        <option value="$PROJECT_DIR$/perceptrons/levels/level1__.txt" />
+        <option value="$PROJECT_DIR$/perceptrons/TrainingData.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Map.cpp" />
+        <option value="$PROJECT_DIR$/Map.h" />
+        <option value="$PROJECT_DIR$/level2/level9.txt" />
+        <option value="$PROJECT_DIR$/level2/level1.txt" />
+        <option value="$PROJECT_DIR$/level2/level2.txt" />
+        <option value="$PROJECT_DIR$/level2/level3.txt" />
+        <option value="$PROJECT_DIR$/level2/level4.txt" />
+        <option value="$PROJECT_DIR$/level2/level5.txt" />
+        <option value="$PROJECT_DIR$/level2/level6.txt" />
+        <option value="$PROJECT_DIR$/level2/level7.txt" />
+        <option value="$PROJECT_DIR$/level2/level8.txt" />
+        <option value="$PROJECT_DIR$/Execution.h" />
         <option value="$PROJECT_DIR$/Execution.cpp" />
+        <option value="$PROJECT_DIR$/perceptron/Perceptron.h" />
+        <option value="$PROJECT_DIR$/perceptron/Perceptron.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1490" />
-    <option name="width" value="1522" />
-    <option name="height" value="1932" />
+    <option name="x" value="2268" />
+    <option name="y" value="-30" />
+    <option name="width" value="762" />
+    <option name="height" value="560" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -193,7 +202,17 @@
           <expand>
             <path>
               <item name="SokobanSolver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sokoban-cpp" type="462c0819:PsiDirectoryNode" />
+              <item name="CrossSokobanSolverLinux" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SokobanSolver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CrossSokobanSolverLinux" type="462c0819:PsiDirectoryNode" />
+              <item name="level2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SokobanSolver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CrossSokobanSolverLinux" type="462c0819:PsiDirectoryNode" />
+              <item name="perceptron" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -204,7 +223,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main.cpp" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Codes/sokoban/sokoban-cpp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -212,6 +231,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\atopi\CLionProjects\CrossSokobanSolver\CrossSokobanSolverLinux\level2" />
+      <recent name="C:\Users\atopi\Codes\sokoban\sokoban-cpp\perceptrons\levels" />
       <recent name="C:\Users\atopi\CLionProjects\SokobanSolver\level" />
       <recent name="C:\Users\atopi\CLionProjects\SokobanSolver\hungarian" />
     </key>
@@ -228,7 +249,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SokobanSolver">
+  <component name="RunManager" selected="Application.Build All">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -246,6 +267,7 @@
   </component>
   <component name="SvnConfiguration">
     <configuration />
+    <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -283,7 +305,23 @@
       <workItem from="1547480858508" duration="121000" />
       <workItem from="1547481057128" duration="9527000" />
       <workItem from="1547581063178" duration="2934000" />
-      <workItem from="1547663011666" duration="4564000" />
+      <workItem from="1547663011666" duration="4693000" />
+      <workItem from="1547710090259" duration="3285000" />
+      <workItem from="1547812797313" duration="668000" />
+      <workItem from="1548313928759" duration="5120000" />
+      <workItem from="1548416688720" duration="4531000" />
+      <workItem from="1548438411273" duration="588000" />
+      <workItem from="1548444751710" duration="4035000" />
+      <workItem from="1548611132579" duration="10957000" />
+      <workItem from="1548676083344" duration="13823000" />
+      <workItem from="1548760518982" duration="2990000" />
+      <workItem from="1548919059758" duration="7000" />
+      <workItem from="1550932271325" duration="15000" />
+      <workItem from="1551645952731" duration="185000" />
+      <workItem from="1553272900097" duration="8547000" />
+      <workItem from="1553333172414" duration="2865000" />
+      <workItem from="1553452497337" duration="74000" />
+      <workItem from="1553468040661" duration="36000" />
     </task>
     <task id="LOCAL-00001" summary="Improved">
       <created>1547051699843</created>
@@ -306,16 +344,23 @@
       <option name="project" value="LOCAL" />
       <updated>1547052148660</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finalized">
+      <created>1547668478332</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1547668478332</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149363000" />
+    <option name="totallyTimeSpent" value="207218000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2694158" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26254296" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -326,9 +371,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" visible="true" weight="0.32858837" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32858837" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32977462" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32977462" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.32977462" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -345,339 +390,177 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="Improved" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved" />
+    <MESSAGE value="Finalized" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalized" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Map1.h" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa9632.24144/hungarian.h" />
-    <entry file="file://$PROJECT_DIR$/hungarian/testMain.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/a_Node.h" />
-    <entry file="file://$PROJECT_DIR$/hungarian/Hungarian.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <element signature="e#560#579#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hungarian/Hungarian.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-145" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/level/level1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level10.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level6.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level4.txt" />
+    <entry file="file://$PROJECT_DIR$/fast_solv.cpp" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level4_run.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level224.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level225.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level226.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level227.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level228.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level18.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level130.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level184.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level136__.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level200.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level203.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level1__.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level192__.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level193__.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level177__.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level189.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level195.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level159.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level177.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level166.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level2.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/level1.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/levels/run.txt" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/TrainingData.cpp" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/RunningMap.cpp" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/RunningMap.h" />
+    <entry file="file://$PROJECT_DIR$/perceptrons/TrainingData.h" />
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="295" selection-start-line="5" selection-start-column="295" selection-end-line="5" selection-end-column="295" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TranspositionTable.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <element signature="e#130#154#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Map.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_vector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="780" selection-start-line="780" selection-end-line="780" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/level/level3.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/level/level2.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/predefined_ops.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="143" selection-start-line="143" selection-end-line="143" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_heap.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="200" selection-start-line="200" selection-end-line="200" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_queue.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="568" selection-start-line="568" selection-end-line="568" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../mingw/lib/gcc/mingw32/6.3.0/include/c++/vector">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="e#2316#2346#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_algobase.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
-    <entry file="file://$PROJECT_DIR$/level/level5.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/level/level4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        <state relative-caret-position="119">
+          <caret line="7" column="349" selection-start-line="7" selection-start-column="349" selection-end-line="7" selection-end-column="349" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TranspositionTable.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        <state relative-caret-position="401">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Move.cpp">
+    <entry file="file://$PROJECT_DIR$/level2/level1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="153">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AssignmentAlgorithms.cpp">
+    <entry file="file://$PROJECT_DIR$/level2/level2.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
-          <folding>
-            <element signature="e#42#59#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h">
+    <entry file="file://$PROJECT_DIR$/level2/level3.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="5012" selection-start-line="5012" selection-end-line="5012" />
+        <state relative-caret-position="153">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SokobanSolver_ver1/main.cpp" />
-    <entry file="file://$PROJECT_DIR$/../../mingw/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_list.h">
+    <entry file="file://$PROJECT_DIR$/level2/level5.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="156" selection-start-line="156" selection-end-line="156" />
+        <state relative-caret-position="153">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AStar.cpp">
+    <entry file="file://$PROJECT_DIR$/level2/level6.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="e#42#60#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlayerPath_old.cpp">
+    <entry file="file://$PROJECT_DIR$/level2/level7.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="98" selection-start-line="98" selection-end-line="108" selection-end-column="5" />
+        <state relative-caret-position="153">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlayerPath_old.h">
+    <entry file="file://$PROJECT_DIR$/level2/level4.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding>
-            <element signature="e#113#129#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlayerPath.h">
+    <entry file="file://$PROJECT_DIR$/level2/level8.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#116#133#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlayerPath.cpp">
+    <entry file="file://$PROJECT_DIR$/level2/level9.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+        <state relative-caret-position="153">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perceptron/Perceptron.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="93" column="24" selection-start-line="93" selection-start-column="24" selection-end-line="93" selection-end-column="24" />
           <folding>
             <element signature="e#42#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AStar.h">
+    <entry file="file://$PROJECT_DIR$/perceptron/Perceptron.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Move.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Metrics.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Metrics.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1717">
-          <caret line="101" column="44" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
-          <folding>
-            <element signature="e#42#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AssignmentAlgorithms.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeadlockDetection.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeadlockDetection.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <folding>
-            <element signature="e#42#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Map.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoundAlgorithm.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoundAlgorithm.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-          <folding>
-            <element signature="e#122#137#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Node.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-          <folding>
-            <element signature="e#42#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Execution.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-          <folding>
-            <element signature="e#112#129#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Node.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="e#102#119#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="918">
+          <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Execution.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="124" column="1" selection-start-line="124" selection-start-column="1" selection-end-line="124" selection-end-column="1" />
+        <state relative-caret-position="1071">
+          <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Execution.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Map.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Map.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2805">
+          <caret line="165" selection-start-line="165" selection-end-line="165" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../TensorflowTest/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3128">
+          <caret line="184" column="13" selection-start-line="184" selection-start-column="13" selection-end-line="184" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        <state relative-caret-position="452">
+          <caret line="96" column="63" selection-start-line="96" selection-start-column="63" selection-end-line="96" selection-end-column="63" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#367#395#0" expanded="true" />
           </folding>
         </state>
       </provider>

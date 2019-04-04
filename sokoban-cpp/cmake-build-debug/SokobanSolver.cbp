@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug"/>
+				<Option working_dir="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug"/>
+				<Option working_dir="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="SokobanSolver">
-				<Option output="C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/SokobanSolver.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug"/>
+				<Option output="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/SokobanSolver.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -43,15 +43,15 @@
 					<Add directory="c:\users\atopi\codes\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 SokobanSolver"/>
-					<CompileFile command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 SokobanSolver"/>
+					<CompileFile command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="SokobanSolver/fast">
-				<Option output="C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/SokobanSolver.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug"/>
+				<Option output="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/SokobanSolver.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -65,87 +65,93 @@
 					<Add directory="c:\users\atopi\codes\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 SokobanSolver/fast"/>
-					<CompileFile command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 SokobanSolver/fast"/>
+					<CompileFile command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug"/>
+				<Option working_dir="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/Codes/sokoban/sokoban-cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/atopi/Codes/GnuWin32/bin/make.exe -f &quot;C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/AStar.cpp">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/AStar.cpp">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/AStar.h">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/AStar.h">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/AssignmentAlgorithms.cpp">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/AssignmentAlgorithms.cpp">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/AssignmentAlgorithms.h">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/AssignmentAlgorithms.h">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/BoundAlgorithm.cpp">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/BoundAlgorithm.cpp">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/BoundAlgorithm.h">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/BoundAlgorithm.h">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/DeadlockDetection.cpp">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/DeadlockDetection.cpp">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/DeadlockDetection.h">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/DeadlockDetection.h">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/Execution.cpp">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/Execution.cpp">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/Execution.h">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/Execution.h">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/Map.cpp">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/Map.cpp">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/Map.h">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/Map.h">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/Metrics.cpp">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/Metrics.cpp">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/Metrics.h">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/Metrics.h">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/Node.cpp">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/Node.cpp">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/Node.h">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/Node.h">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/TranspositionTable.cpp">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/TranspositionTable.cpp">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/TranspositionTable.h">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/TranspositionTable.h">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/hungarian/Hungarian.cpp">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/hungarian/Hungarian.cpp">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/hungarian/Hungarian.h">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/hungarian/Hungarian.h">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/main.cpp">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/main.cpp">
 			<Option target="SokobanSolver"/>
 		</Unit>
-		<Unit filename="C:/Users/atopi/Codes/sokoban/sokoban-cpp/CMakeLists.txt">
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/perceptron/Perceptron.cpp">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/perceptron/Perceptron.h">
+			<Option target="SokobanSolver"/>
+		</Unit>
+		<Unit filename="C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

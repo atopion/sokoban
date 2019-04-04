@@ -1,0 +1,3 @@
+C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/CMakeFiles/SokobanSolver.dir
+C:/Users/atopi/CLionProjects/CrossSokobanSolver/CrossSokobanSolverLinux/cmake-build-debug/CMakeFiles/edit_cache.dir

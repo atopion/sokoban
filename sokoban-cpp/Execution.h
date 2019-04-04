@@ -12,6 +12,7 @@
 #include "AssignmentAlgorithms.h"
 #include "DeadlockDetection.h"
 #include "BoundAlgorithm.h"
+#include "perceptron/Perceptron.h"
 
 class Execution
 {
@@ -24,13 +25,20 @@ private:
     int boxCount;
     std::list<Node*> openSet;
 
+    // DEBUG
+    int PathCount;
+    int secondTryCount;
+    bool b;
+    int c;
+
     TranspositionTable transpositionTable;
     AssignmentAlgorithms assignmentAlgorithms;
     DeadlockDetection deadlockDetection;
     BoundAlgorithm boundAlgorithms;
+    Perceptron perceptron;
 
 public:
-    explicit Execution(Map &map);
+    explicit Execution(Map *map);
 
     Move **possibleMoves(int pos, int *box_array);
     Node *analyseState(Node *node);
@@ -40,6 +48,9 @@ public:
 
     //DEBUG
     void printDeadlockMap();
+    int getPathCount() { return PathCount; }
+    int getSecondTryCount() { return secondTryCount; }
+    int getCCount() { return c; }
 };
 
 #endif //SOKOBANSOLVER_EXECUTION_H

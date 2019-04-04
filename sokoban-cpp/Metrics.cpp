@@ -74,8 +74,10 @@ Metrics::Metrics(int width, int height, int *targets, int targets_count, int *cl
 Metrics::~Metrics()
 {
     for(int i = 0; i < size; i++)
-        delete distance_to_goals[i];
-    delete distance_to_goals;
+        delete[] distance_to_goals[i];
+    delete[] distance_to_goals;
+
+    delete[] target_codes;
 }
 
 int Metrics::manhattan_distance(int a, int b, int width)

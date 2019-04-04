@@ -19,7 +19,7 @@ DeadlockDetection::DeadlockDetection(int *game_map, int size, int width, int *ta
 
 DeadlockDetection::~DeadlockDetection()
 {
-    delete deadlock_array;
+    delete[] deadlock_array;
 }
 
 bool DeadlockDetection::lookup(int a)

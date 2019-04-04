@@ -24,7 +24,7 @@ private:
     Metrics metrics;
 
 public:
-    explicit BoundAlgorithm(Map map);
+    explicit BoundAlgorithm(Map *map);
     int greedyBound(int* boxArray, int pos);
     Point minimum(int *array, int arraySize, std::list<int> exclude, int target);
 };

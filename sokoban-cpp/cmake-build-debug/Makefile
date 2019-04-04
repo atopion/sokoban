@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2018.2.6\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\atopi\Codes\sokoban\sokoban-cpp
+CMAKE_SOURCE_DIR = C:\Users\atopi\CLionProjects\CrossSokobanSolver\CrossSokobanSolverLinux
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\atopi\Codes\sokoban\sokoban-cpp\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\atopi\CLionProjects\CrossSokobanSolver\CrossSokobanSolverLinux\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\atopi\Codes\sokoban\sokoban-cpp\cmake-build-debug\CMakeFiles C:\Users\atopi\Codes\sokoban\sokoban-cpp\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\atopi\CLionProjects\CrossSokobanSolver\CrossSokobanSolverLinux\cmake-build-debug\CMakeFiles C:\Users\atopi\CLionProjects\CrossSokobanSolver\CrossSokobanSolverLinux\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\atopi\Codes\sokoban\sokoban-cpp\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\atopi\CLionProjects\CrossSokobanSolver\CrossSokobanSolverLinux\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -419,6 +419,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\SokobanSolver.dir\build.make CMakeFiles/SokobanSolver.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+perceptron/Perceptron.obj: perceptron/Perceptron.cpp.obj
+
+.PHONY : perceptron/Perceptron.obj
+
+# target to build an object file
+perceptron/Perceptron.cpp.obj:
+	$(MAKE) -f CMakeFiles\SokobanSolver.dir\build.make CMakeFiles/SokobanSolver.dir/perceptron/Perceptron.cpp.obj
+.PHONY : perceptron/Perceptron.cpp.obj
+
+perceptron/Perceptron.i: perceptron/Perceptron.cpp.i
+
+.PHONY : perceptron/Perceptron.i
+
+# target to preprocess a source file
+perceptron/Perceptron.cpp.i:
+	$(MAKE) -f CMakeFiles\SokobanSolver.dir\build.make CMakeFiles/SokobanSolver.dir/perceptron/Perceptron.cpp.i
+.PHONY : perceptron/Perceptron.cpp.i
+
+perceptron/Perceptron.s: perceptron/Perceptron.cpp.s
+
+.PHONY : perceptron/Perceptron.s
+
+# target to generate assembly for a file
+perceptron/Perceptron.cpp.s:
+	$(MAKE) -f CMakeFiles\SokobanSolver.dir\build.make CMakeFiles/SokobanSolver.dir/perceptron/Perceptron.cpp.s
+.PHONY : perceptron/Perceptron.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -461,6 +488,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... perceptron/Perceptron.obj
+	@echo ... perceptron/Perceptron.i
+	@echo ... perceptron/Perceptron.s
 .PHONY : help
 
 

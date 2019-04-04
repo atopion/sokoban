@@ -2,13 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c65660a-33f3-42ec-ab62-ad3d18d8c796" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/level/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sokoban-cpp/level/level6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sokoban-cpp/level/level7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-cpp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-cpp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-cpp/BoundAlgorithm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-cpp/BoundAlgorithm.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-cpp/Execution.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-cpp/Execution.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-cpp/Execution.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-cpp/Execution.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-cpp/Map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-cpp/Map.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-cpp/cmake-build-debug/SokobanSolver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-cpp/cmake-build-debug/SokobanSolver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-cpp/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-cpp/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-java/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-java/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-java/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-java/out/production/SokobanRobot/distanceboard/Viewer$Move.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-java/out/production/SokobanRobot/distanceboard/Viewer$Move.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-java/out/production/SokobanRobot/distanceboard/Viewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-java/out/production/SokobanRobot/distanceboard/Viewer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sokoban-java/src/distanceboard/Viewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sokoban-java/src/distanceboard/Viewer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoundAlgorithms.py" beforeDir="false" afterPath="$PROJECT_DIR$/BoundAlgorithms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Execution.py" beforeDir="false" afterPath="$PROJECT_DIR$/Execution.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/Metrics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Solver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestingStuff.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestingStuff.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,17 +41,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Execution.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="1190">
+              <caret line="77" column="31" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Solver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            <state relative-caret-position="1394">
+              <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
               <folding>
                 <element signature="e#33#54#0" expanded="true" />
               </folding>
@@ -52,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="333">
+              <caret line="231" column="35" selection-start-line="231" selection-start-column="35" selection-end-line="231" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -61,7 +71,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AssignmentAlgorithms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="187">
               <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -73,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BoundAlgorithms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="642">
-              <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+            <state relative-caret-position="408">
+              <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -82,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Metrics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="629">
+              <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -91,10 +101,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TestingStuff.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="306">
               <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -167,10 +177,10 @@
         <option value="$PROJECT_DIR$/AssignmentAlgorithms.py" />
         <option value="$PROJECT_DIR$/level/test" />
         <option value="$PROJECT_DIR$/TestingStuff.py" />
-        <option value="$PROJECT_DIR$/Metrics.py" />
         <option value="$PROJECT_DIR$/BoundAlgorithms.py" />
         <option value="$PROJECT_DIR$/Execution.py" />
         <option value="$PROJECT_DIR$/Solver.py" />
+        <option value="$PROJECT_DIR$/Metrics.py" />
       </list>
     </option>
   </component>
@@ -186,10 +196,9 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1052" />
-    <option name="y" value="186" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-10" />
+    <option name="width" value="1522" />
+    <option name="height" value="1932" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -220,7 +229,7 @@
     <property name="SearchEverywhereHistoryKey" value="-6&#9;FILE&#9;file://C:/Users/atopi/.windows-build-tools/python371/tcl/tcl8.6/tzdata/Etc/GMT-6" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -419,7 +428,13 @@
       <workItem from="1547049565918" duration="1287000" />
       <workItem from="1547062765263" duration="1255000" />
       <workItem from="1547104596358" duration="11803000" />
-      <workItem from="1547467869997" duration="3600000" />
+      <workItem from="1547467869997" duration="8309000" />
+      <workItem from="1547581561768" duration="1647000" />
+      <workItem from="1547663099324" duration="2603000" />
+      <workItem from="1547709662302" duration="382000" />
+      <workItem from="1548438434881" duration="91000" />
+      <workItem from="1548438607443" duration="298000" />
+      <workItem from="1548439571130" duration="1241000" />
     </task>
     <task id="LOCAL-00001" summary="Added Map Saving class">
       <created>1540455570993</created>
@@ -456,16 +471,23 @@
       <option name="project" value="LOCAL" />
       <updated>1543148140300</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed, now functional">
+      <created>1547480870095</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1547480870096</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80357000" />
+    <option name="totallyTimeSpent" value="91328000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49823323" visible="true" weight="0.3388316" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49823323" visible="true" weight="0.23298968" />
       <window_info id="Structure" order="1" sideWeight="0.5017668" side_tool="true" weight="0.31546393" />
       <window_info id="Favorites" order="2" sideWeight="0.5017668" side_tool="true" weight="0.31546393" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -501,7 +523,8 @@
     <MESSAGE value="implemented first part of execute" />
     <MESSAGE value="Improved Execution" />
     <MESSAGE value="Fixes, Pull-Deadlock-Detection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes, Pull-Deadlock-Detection" />
+    <MESSAGE value="Fixed, now functional" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed, now functional" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/GameSpace.py" />
@@ -536,13 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StateTree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-109">
-          <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/level/level1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -573,33 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Map.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AssignmentAlgorithms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestingStuff.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/level/test.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -607,36 +596,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Metrics.py">
+    <entry file="file://$PROJECT_DIR$/StateTree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="323">
+          <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Execution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="77" column="31" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#33#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AssignmentAlgorithms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BoundAlgorithms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+        <state relative-caret-position="408">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Execution.py">
+    <entry file="file://$PROJECT_DIR$/Metrics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Solver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        <state relative-caret-position="629">
+          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
           <folding>
-            <element signature="e#33#54#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Map.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="231" column="35" selection-start-line="231" selection-start-column="35" selection-end-line="231" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestingStuff.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>

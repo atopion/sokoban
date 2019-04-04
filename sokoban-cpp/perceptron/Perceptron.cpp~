@@ -1,0 +1,144 @@
+//
+// Created by atopi on 22.03.2019.
+//
+
+#include <iostream>
+#include "Perceptron.h"
+
+Perceptron::Perceptron(std::string modelPath)
+{
+    this->model = tflite::FlatBufferModel::BuildFromFile(modelPath.c_str());
+    if(!this->model)
+    {
+        std::cout << "Model could not be loaded" << std::endl;
+        exit(-1);
+    }
+
+    tflite::ops::builtin::BuiltinOpResolver resolver;
+
+    tflite::InterpreterBuilder(*model, resolver)(&this->interpreter);
+    if (!this->interpreter) {
+        std::cout << "Failed to construct interpreter\n";
+        exit(-1);
+    }
+
+    this->b = true;
+
+    int input1 = interpreter->inputs()[0];
+
+    this->interpreter->AllocateTensors();
+
+    TfLiteIntArray* dims = interpreter->tensor(input1)->dims;
+    int wanted_height = dims->data[1];
+    int wanted_width = dims->data[2];
+
+    this->inputSize = wanted_height * wanted_width;
+    this->inputWidth = wanted_width;
+    this->inputHeight = wanted_height;
+
+    this->input = interpreter->typed_input_tensor<float>(0);
+}
+
+void Perceptron::invoke(int *directions, int *map, int height, int width)
+{
+    int ic = 0, mc = 0;
+    for(int y = 0; y < this->inputHeight; y++)
+    {
+        for(int x = 0; x < this->inputWidth; x++)
+        {
+            if(y >= height)
+                this->input[ic] = 4;
+            else if(x < width)
+                this->input[ic] = map[mc++];
+            else
+                this->input[ic] = 4;
+            ic++;
+        }
+    }
+
+    /*std::cout << std::endl;
+    ic = 0;
+    for(int y = 0; y < this->inputHeight; y++)
+    {
+        for(int x = 0; x < this->inputWidth; x++)
+        {
+            if (this->input[ic] == 4)
+                std::cout << ".";
+            else
+                std::cout << this->input[ic];
+            ic++;
+        }
+        std::cout << std::endl;
+    }*/
+    /*for(int i = 0; i < inputSize; i++)
+    {
+        if(i < mapSize)
+            this->input[i] = map[i];
+        else
+            this->input[i] = 4; // Wall
+    }*/
+    /*for(int i = 0; i < mapSize; i++)
+        this->input[i] = map[i];*/
+
+    interpreter->Invoke();
+
+    auto output = interpreter->typed_output_tensor<float>(0);
+
+    /*for(int i = 0; i < 3; i++)
+    {
+        std::cout << i << " ";
+        for(int a = 0; a < 4; a++)
+            std::cout << output[a] << " ";
+        std::cout << std::endl;
+
+        float tmp = 0.0;
+        int index = 0, _tmp = 0;
+        for(int j = i; j < 4; j++)
+        {
+            if(output[j] >= tmp)
+                index = j;
+        }
+        tmp = output[i];
+        _tmp = directions[i];
+        output[i] = output[index];
+        directions[i] = directions[index];
+        output[index] = tmp;
+        directions[index] = _tmp;
+    }*/
+
+    if(this->b)
+    {
+        this->b = false;
+        for(int i = 0; i < 4; i++)
+            std::cout << output[i] << " ";
+        std::cout << std::endl;
+    }
+
+    float tmp = 0.0;
+    int _tmp = 0;
+    for(int i = 4; i > 1; i--)
+    {
+        for(int j = 0; j < i-1; j++)
+        {
+            if(output[j] > output[j+1])
+            {
+                tmp = output[j];
+                output[j] = output[j+1];
+                output[j+1] = tmp;
+
+                _tmp = directions[j];
+                directions[j] = directions[j+1];
+                directions[j+1] = _tmp;
+            }
+        }
+    }
+
+    //std::cout << std::endl;
+    /*for(int i = 0; i < mapSize; i++)
+        std::cout << map[i];
+    std::cout << std::endl;*/
+    /*for(int i = 0; i < 4; i++)
+        std::cout << output[i] << " ";
+    std::cout << std::endl;*/
+    //std::cout << directions[0] << std::endl;
+}

@@ -4,12 +4,12 @@
 
 #include "BoundAlgorithm.h"
 
-BoundAlgorithm::BoundAlgorithm(Map map) : metrics(map.getWidth(), map.getHeight(), map.getTargetsArray(), map.getTargetsCount(), map.getClearedMap())
+BoundAlgorithm::BoundAlgorithm(Map *map) : metrics(map->getWidth(), map->getHeight(), map->getTargetsArray(), map->getTargetsCount(), map->getClearedMap())
 {
-    BoundAlgorithm::targets = map.getTargetsArray();
-    BoundAlgorithm::targetCount = map.getTargetsCount();
-    BoundAlgorithm::boxCount = map.getBoxCount();
-    BoundAlgorithm::width = map.getWidth();
+    BoundAlgorithm::targets = map->getTargetsArray();
+    BoundAlgorithm::targetCount = map->getTargetsCount();
+    BoundAlgorithm::boxCount = map->getBoxCount();
+    BoundAlgorithm::width = map->getWidth();
 }
 
 Point BoundAlgorithm::minimum(int *array, int arraySize, std::list<int> exclude, int target)
@@ -70,7 +70,7 @@ int BoundAlgorithm::greedyBound(int *boxArray, int pos)
             break;
         }
         else
-            distance_sum += x.m + y.m;
+            distance_sum += x.m + 2*y.m;
     }
 
     return distance_sum;

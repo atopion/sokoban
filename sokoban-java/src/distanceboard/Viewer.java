@@ -176,6 +176,15 @@ public class Viewer extends JFrame implements ActionListener, GridCell.CellClick
                     gridPane.get(y, x).resizeIcons();
                     gridPane.get(y, x).reset();
                     break;
+                case '*': // Box placed on goal
+                    targets.add(new Move(y, x));
+                    gridPane.get(y, x).resizeIcons();
+                    gridPane.get(y, x).setBox();
+                    break;
+                case '+': // Agent placed on goal
+                    targets.add(new Move(y, x));
+                    gridPane.get(y, x).resizeIcons();
+                    gridPane.get(y, x).setPlayer();
                 case '\n':// New Line
                     if(width == -1)
                         width = x;

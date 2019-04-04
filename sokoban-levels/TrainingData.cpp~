@@ -1,0 +1,536 @@
+//
+// Created by atopi on 27.01.2019.
+//
+
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <iomanip>
+#include <stdio.h>
+#include <pthread.h>
+#include "TrainingData.h"
+
+#define NUM_THREADS 2
+
+TrainingData::TrainingData(std::string levelFolder)
+{
+    TrainingData::levelFolder = levelFolder;
+    if(this->levelFolder[this->levelFolder.npos] != '/')
+        this->levelFolder += "/";
+
+
+}
+
+inline void TrainingData::rtrim(std::string &s) {
+    s.erase(std::find_if(s.rbegin(), s.rend(),
+                         std::not1(std::ptr_fun<int, int>(std::isspace))).base(), s.end());
+}
+
+void TrainingData::split()
+{
+    int a = 1;
+    for(int i = 1; i < 6; i++)
+    {
+        std::ifstream ifile;
+        std::ofstream ofile;
+        std::string str, line;
+        std::stringstream stream;
+
+        ifile.open(R"(E:\tmp\learn\sokoban-cpp\perceptrons\levels\level)" + std::to_string(i) + ".txt", std::istream::in);
+        if(!ifile.is_open()) continue;
+
+        while( getline(ifile, line) )
+        {
+            TrainingData::rtrim(line);
+            if(line[0] == ';')
+                continue;
+
+            else if(line.empty())
+            {
+                ofile.open(R"(E:\tmp\learn\sokoban-cpp\perceptrons\levels\x\x)" + std::to_string(a++) + ".txt", std::ostream::out);
+                str = closingBorder(stream.str());
+                ofile << str;
+                stream.str("");
+                ofile.close();
+            }
+            else
+                stream << line << "\n";
+        }
+
+        ifile.close();
+    }
+}
+
+void TrainingData::solve()
+{
+    for(int i = 3; i < 101; i++)
+    {
+        solveCore(i, this->levelFolder);
+    }
+    std::cout << "Finished" << std::endl;
+}
+
+std::vector<int> inits;
+std::string levelF;
+pthread_mutex_t lock_x;
+
+void TrainingData::solveThread()
+{
+    inits = std::vector<int>(0);
+    for(int i = 3; i < 101; i++)
+        inits.emplace_back(i);
+    levelF = this->levelFolder;
+
+    pthread_t thr[NUM_THREADS];
+    pthread_mutex_init(&lock_x, NULL);
+
+    int rc;
+    for(int i = 0; i < NUM_THREADS; i++)
+    {
+        if (rc = pthread_create(&thr[i], NULL, _solveThread, NULL)) {
+            std::cerr << "Error: pthread_create, rc: " << rc << std::endl;;
+        }
+    }
+
+    for (int i = 0; i < NUM_THREADS; ++i) {
+        pthread_join(thr[i], NULL);
+    }
+
+    std::cout << "\rFinished." << std::endl;
+}
+
+void *TrainingData::_solveThread(void *arg)
+{
+    while(!inits.empty())
+    {
+        pthread_mutex_lock(&lock_x);
+        int index = inits.front();
+        inits.erase(inits.begin());  
+        pthread_mutex_unlock(&lock_x);
+
+        solveCore(index, levelF);
+    }
+}
+
+void TrainingData::solveCore(int i, std::string folder)
+{
+    std::string pad = (i < 10 ? "000" : (i < 100 ? "00" : (i < 1000 ? "0" : "")));
+    std::cout << "Working on File " << folder + "level" + pad + std::to_string(i) + ".txt" << std::endl;
+
+    std::ifstream ifile;
+    std::ofstream ofile;
+    std::string str, solv, line;
+    std::stringstream stream;
+
+    ifile.open(folder + "level" + pad + std::to_string(i) + ".txt");
+    if(!ifile.is_open()) return;
+    if(ifile.peek() == std::ifstream::traits_type::eof()) return;
+
+    while ( getline (ifile, line) )
+    {
+        if(line[0] == 'u' || line[0] == 'd' || line[0] == 'l' || line[0] == 'r')
+            return;
+
+        if(!line.empty())
+            stream << line << '\n';
+    }        
+
+    ifile.close();
+    str = stream.str();
+
+    solv = generate(str);
+
+    if(solv.find("No") != std::string::npos)
+    {
+        solv = "";
+        ofile.open(folder + "level" + pad + std::to_string(i) + "-empty.txt", std::ofstream::out | std::ofstream::trunc);
+        if(!ofile.is_open()) return;
+        ofile << str;
+        ofile.close();
+    }
+    else
+    {
+        ofile.open(folder + "level" + pad + std::to_string(i) + ".txt", std::ofstream::out | std::ofstream::trunc);
+        if(!ofile.is_open()) return;
+        ofile << str;
+        ofile << solv << std::endl;
+        ofile.close();
+    }
+}
+
+void TrainingData::clear()
+{
+    for(int i = 1; i < 277; i++)
+    {
+        std::ifstream ifile;
+        std::ofstream ofile;
+        std::string str, line;
+        std::stringstream stream;
+
+        ifile.open(R"(C:\Users\atopi\Codes\sokoban\sokoban-cpp\perceptrons\levels\level)" + std::to_string(i) + ".txt");
+        if(!ifile.is_open()) continue;
+        while ( getline (ifile, line) )
+        {
+            char c = line[0];
+            if(!(c == 'l' || c == 'r' || c == 'u' || c == 'd'))
+                stream << line << '\n';
+        }
+        ifile.close();
+        str = stream.str();
+
+        ofile.open(R"(C:\Users\atopi\Codes\sokoban\sokoban-cpp\perceptrons\levels\level)" + std::to_string(i) + ".txt", std::ofstream::out | std::ofstream::trunc);
+        if(!ofile.is_open()) continue;
+        ofile << str;
+        ofile.close();
+    }
+}
+
+std::string TrainingData::generate(std::string level)
+{
+    std::string result;
+    Map game_map = Map(level);
+    game_map.mapProduction();
+
+    auto x0 = std::list<Node *>();
+    Node root = Node(game_map.getBoxArray(), game_map.getPlayer(), nullptr, nullptr, 10000, x0, 0);
+
+    Execution exec = Execution(game_map);
+    Node *tmp;
+
+    Node *solution = exec.execute(&root);
+
+    if(solution == nullptr)
+        result += "No solution found";
+    else {
+        int i = 0;
+        while (solution->move != nullptr) {
+            i++;
+            Move *m = solution->move;
+            int x = m->to - m->from;
+            //result.insert(0, Move::str(*m) + ", ");
+
+            if (x == 1) result.insert(0, "r");
+            else if (x == -1) result.insert(0, "l");
+            else if (x > 0) result.insert(0, "d");
+            else if (x < 0) result.insert(0, "u");
+
+            tmp = solution->farther;
+            //delete solution;
+            solution = tmp;
+        }
+    }
+    return result;
+}
+
+std::string TrainingData::closingBorder(std::string level)
+{
+    unsigned int width = 0;
+    unsigned int count = 0;
+    std::string line;
+    for(auto it = level.begin(); it != level.end(); it++)
+    {
+        if(*it == '\n') {
+            if (count > width)
+                width = count;
+            count = 0;
+        }
+        else
+            count++;
+    }
+
+    bool start = true;
+    count = 0;
+    for(auto it = level.begin(); it != level.end(); it++)
+    {
+        if(*it == ' ' && start)
+        {
+            *it = '#';
+            count++;
+        }
+        else if(*it == '\n')
+        {
+            std::cout << "C: " << count << " W: " << width << std::endl;
+            if(count < width)
+                for(int a = 0; a < width - count; a++)
+                    line += "#";
+            count = 0;
+            start = true;
+        }
+        else{
+            count++;
+            start = false;
+        }
+        line += *it;
+    }
+
+    return line;
+}
+
+void TrainingData::gen()
+{
+    std::ifstream ifile;
+    std::ofstream ofile;
+    std::string line, str, solution;
+    std::stringstream stream;
+    int level_count = 0;
+    ofile.open(R"(E:\tmp\learn\sokoban-cpp\perceptrons\levels\run.txt)", std::ofstream::out | std::ofstream::app);
+
+    for(int a = 1; a < 628; a++)
+    {
+        std::cout << "Reading level " << a << std::endl;
+        solution = "";
+        stream.str("");
+        ifile.open(R"(E:\tmp\learn\sokoban-cpp\perceptrons\levels\x\x)" + std::to_string(a) + ".txt");
+        if(ifile.peek() == std::ifstream::traits_type::eof()) continue;
+        int count = 0;
+        int width = 0;
+        while ( getline (ifile, line) )
+        {
+            if(line[0] == 'l' || line[0] == 'r' || line[0] == 'u' || line[0] == 'd')
+                solution = line;
+            else
+            {
+                if(line.length() < 13)
+                    line.append(13 - line.length(), '#');
+                if(line.length() > width)
+                    width = line.size();
+                count++;
+                stream << line << '\n';
+            }
+        }
+        ifile.close();
+        if(solution.empty())
+        {
+            std::cout << "\tNo solution for " << a << std::endl;
+            continue;
+        }
+        if(count < 13)
+        {
+            for(; count < 13; count++)
+                stream << "#############\n";
+        }
+        if(count > 13 || width > 13)
+        {
+            std::cout << "\tFile " << a << " is to big. Skipping." << std::endl;
+            continue;
+        }
+        str = stream.str();
+        level_count++;
+
+
+        for(unsigned int i = 0; i < solution.size(); i++)
+        {
+            ofile << std::setw(3) << std::setfill('0') << i;
+            ofile << solution[i];
+            ofile << '|';
+            ofile << generateTrainingData(str, solution, i);
+            ofile << std::endl;
+        }
+        ofile << "-------------------------------------------------------" << std::endl;
+    }
+    ofile.close();
+    std::cout << std::endl << std::endl << "Processed " << level_count << " levels" << std::endl;
+}
+
+std::string TrainingData::generateTrainingData(std::string &level, const std::string solution, unsigned int step)
+{
+    RunningMap rmap = RunningMap(level);
+
+    if(step > solution.length() -1)
+        return "";
+
+    std::string result(solution, step, step);
+
+    for(unsigned int i = 0; i <= step; i++)
+        rmap.move(solution[i]);
+
+    result = rmap.getCodes();
+
+    return result;
+}
+
+void TrainingData::centerPlayer()
+{
+    std::ifstream ifile;
+    std::ofstream ofile;
+    std::string line, str, solution;
+    std::stringstream stream;
+    ifile.open(R"(E:\tmp\learn\sokoban-cpp\perceptrons\levels\ver01\run.txt)");
+    ofile.open(R"(E:\tmp\learn\sokoban-cpp\perceptrons\levels\ver01\run_centered.txt)", std::ofstream::out | std::ofstream::app);
+
+    if(ifile.peek() == std::ifstream::traits_type::eof())
+    {
+        std::cerr << "Error eof" << std::endl;
+        return;
+    }
+
+    while( getline(ifile, line) )
+    {
+        if(line.empty())
+            continue;
+
+        if(line[0] == '-')
+        {
+            ofile << "-------------------------------------------------------" << std::endl;
+            continue;
+        }
+
+        std::vector<std::vector<char>> mat;
+        std::vector<char> tmp;
+        bool init = true;
+        std::string numb;
+        int number = 0;
+        char result = ' ';
+        int a = 0, b = 0, player_x = 0, player_y = 0;
+
+
+        for(char c : line)
+        {
+            if(init) {
+                if (std::isdigit(c))
+                    numb += c;
+                else if(c == '|')
+                    init = false;
+                else
+                    result = c;
+            }
+            else {
+                if(c == '|')
+                {
+                    mat.emplace_back(std::vector<char>(tmp));
+                    tmp.clear();
+                    a = 0;
+                    b++;
+                }
+                else if(c == '1')
+                {
+                    player_x = a;
+                    player_y = b;
+                    tmp.push_back(c);
+                }
+                else {
+                    tmp.push_back(c);
+                    a++;
+                }
+
+            }
+        }
+
+        number = atoi(numb.c_str());
+        int alpha;
+        if((alpha = player_y - 6) > 0)
+            std::rotate(mat.begin(), mat.begin() + alpha, mat.end());
+        else
+            std::rotate(mat.begin(), mat.end() + alpha, mat.end());
+
+        for(auto it = mat.begin(); it != mat.end(); it++)
+        {
+            if((alpha = player_x - 6) > 0)
+                std::rotate(it->begin(), it->begin() + alpha, it->end());
+            else
+                std::rotate(it->begin(), it->end() + alpha, it->end());
+        }
+
+        /*int from_top = 0, from_left = 0, count1 = 0, count2 = 0;
+        for(std::vector<char> &v : mat)
+        {
+            for(char ver01 : v) {
+                stream << ver01;
+                if(ver01 == '1')
+                {
+                    from_top = count1;
+                    from_left = count2;
+                }
+                count2++;
+            }
+            count2 = 0;
+            count1++;
+            stream << std::endl;
+        }
+        std::cout << "TOP: " << from_top << "\tLEFT: " << from_left << std::endl;
+        stream.str("");
+
+        std::cout << number << result << std::endl;*/
+
+        ofile << std::setw(3) << std::setfill('0') << number;
+        ofile << result;
+        ofile << '|';
+
+        for(std::vector<char> &v : mat)
+        {
+            for(char c : v)
+            {
+                ofile << c;
+            }
+            ofile << '|';
+        }
+        ofile << std::endl;
+    }
+
+    ifile.close();
+    ofile.close();
+}
+
+void TrainingData::constructOpenNNData()
+{
+    std::ifstream ifile;
+    std::ofstream ofile;
+    std::string line, str, solution;
+    std::stringstream stream;
+    ifile.open(R"(E:\tmp\learn\sokoban-cpp\perceptrons\levels\ver02\run_centered.txt)");
+    ofile.open(R"(E:\tmp\learn\sokoban-cpp\perceptrons\OpenNN\run_opennn_centered.csv)", std::ofstream::out | std::ofstream::trunc);
+
+    int count = 0;
+
+    while( getline(ifile, line) )
+    {
+        if(line.empty())
+            continue;
+
+        if(line[0] == '-')
+        {
+            //ofile << "-------------------------------------------------------" << std::endl;
+            continue;
+        }
+
+        char result = line[3];
+        std::string res;
+        std::string level = line.substr(5, std::string::npos);
+        level.erase(std::remove(level.begin(), level.end(), '|'), level.end());
+
+        for(char c : level)
+            stream << c << " ";
+
+        switch(result)
+        {
+            case 'u':
+                res = "1 0 0 0";
+                break;
+            case 'd':
+                res = "0 1 0 0";
+                break;
+
+            case 'l':
+                res = "0 0 1 0";
+                break;
+            case 'r':
+                res = "0 0 0 1";
+                break;
+            default:
+                res = "0 0 0 0";
+        }
+
+        if(res == "0 0 0 0")
+        {
+            std::cout << "Error on result " << result << std::endl;
+        }
+
+        ofile << stream.str() << res << std::endl;
+        stream.str("");
+
+    }
+
+    ofile.close();
+    ifile.close();
+}
+

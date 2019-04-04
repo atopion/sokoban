@@ -16,7 +16,6 @@ class Metrics:
         self.size = width * height
         self.metric_code = metric_code
         self.distances = np.full((self.size, self.size), 32000, dtype=int)
-        self.pre_point = np.full((self.size, self.size), -1, dtype=int)
 
         mqueue = queue.Queue()
         for i in range(0, self.size, 1):

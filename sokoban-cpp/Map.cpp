@@ -13,21 +13,52 @@ Map::Map(std::string &str)
     height = 0;
     size = str.size();
     for(char c : str) if(c == '\n') size--;
-    Map::mapstring = str;
-    Map::map = new int[size]; //(int *) malloc(str.size());
-    Map::clearedMap = new int[size];
-    Map::player = 0;
+    this->mapstring = str;
+    this->map = new int[size];
+    this->clearedMap = new int[size];
+    this->player = 0;
 }
 
 Map::~Map()
 {
-    delete[] Map::map; //free(Map::map);
+    if(this->map != nullptr)
+    {
+        delete[] this->map;
+        this->map = nullptr;
+    }
+    if(this->clearedMap != nullptr)
+    {
+        delete[] this->clearedMap;
+        this->clearedMap = nullptr;
+    }
+    if(this->boxArray != nullptr)
+    {
+        delete[] this->boxArray;
+        this->boxArray = nullptr;
+    }
+    if(this->targetArray != nullptr)
+    {
+        delete[] this->targetArray;
+        this->targetArray = nullptr;
+    }
 }
 
 void Map::mapProduction()
 {
-    int tmp = 0, j = 0;
+    int tmp = 0, j = 0, max = 0;
     std::vector<int> boxes, targets;
+    
+    size_t ind = 0;
+    while (true) {
+        ind = mapstring.find("\r\n", ind);
+        if (ind == std::string::npos) break;
+
+        mapstring.replace(ind, 2, "\n");
+
+        ind += 2;
+    }
+
+
     for(char c : mapstring)
     {
         tmp++;
@@ -61,10 +92,24 @@ void Map::mapProduction()
                 clearedMap[j] = 5;
                 j++;
                 break;
+            case '*': // Box placed on goal
+                map[j] = 6;
+                clearedMap[j] = 3;
+                targets.push_back(j);
+                boxes.push_back(j);
+                j++;
+                break;
+            case '+': // Agent placed on goal
+                map[j] = 7;
+                clearedMap[j] = 3;
+                targets.push_back(j);
+                player = j;
+                j++;
+                break;
 
             case '\n': // New line
-                if(tmp > width)
-                    width = tmp;
+                if(tmp > max)
+                    max = tmp;
                 tmp = 0;
                 break;
 
@@ -72,17 +117,17 @@ void Map::mapProduction()
                 break;
         }
     }
-    width = width -1;
-    std::cout << "Width: " << width << std::endl;
-    size = j;
-    height = size / width;
+    this->width = max -1;
+    //std::cout << "Width: " << width << std::endl;
+    this->size = j;
+    this->height = size / this->width;
 
-    boxArray = new int[boxes.size()];
-    boxCount = boxes.size();
-    for(int i = 0; i < boxes.size(); i++) boxArray[i] = boxes[i];
-    targetArray = new int[targets.size()];
-    targetCount = targets.size();
-    for(int i = 0; i < targets.size(); i++) targetArray[i] = targets[i];
+    this->boxArray = new int[boxes.size()];
+    this->boxCount = boxes.size();
+    for(int i = 0; i < boxes.size(); i++) this->boxArray[i] = boxes[i];
+    this->targetArray = new int[targets.size()];
+    this->targetCount = targets.size();
+    for(int i = 0; i < targets.size(); i++) this->targetArray[i] = targets[i];
 }
 
 void Map::printMap()
@@ -106,6 +151,12 @@ void Map::printMap()
                 break;
             case 5:
                 std::cout << " ";
+                break;
+            case 6:
+                std::cout << "*";
+                break;
+            case 7:
+                std::cout << "+";
                 break;
 
             default:
@@ -160,6 +211,27 @@ int Map::getTargetsCount() { return targetCount; }
 int Map::getPlayer() { return player; }
 
 int* Map::getClearedMap() { return clearedMap; }
-int* Map::getMap() { return map; }
 int* Map::getBoxArray() { return boxArray; }
 int* Map::getTargetsArray() { return targetArray; }
+
+int* Map::getFullMap(int *boxArray, int pos)
+{
+    int *new_map = new int[this->size];
+    for(int i = 0; i < this->size; i++)
+    {
+        for(int j = 0; j < this->boxCount; j++)
+        {
+            if(i == boxArray[j])
+            {
+                new_map[i] = 2;
+                goto loopEnd;
+            }
+        }
+        new_map[i] = this->clearedMap[i];
+        loopEnd:
+        int a = 0;
+    }
+
+    new_map[pos] = 1;
+    return new_map;
+}

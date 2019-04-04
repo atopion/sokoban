@@ -6,6 +6,7 @@
 #define SOKOBANSOLVER_MAP_H
 
 #include <iostream>
+#include <algorithm>
 
 class Map {
 private:
@@ -40,7 +41,7 @@ public:
     int getPlayer();
 
     int* getClearedMap();
-    int* getMap();
+    int* getFullMap(int *boxArray, int pos);
     int* getBoxArray();
     int* getTargetsArray();
 

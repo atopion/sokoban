@@ -8,6 +8,7 @@
 
 #include <unordered_map>
 #include <random>
+#include <iostream>
 
 
 class TranspositionTable {
