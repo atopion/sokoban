@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <list>
 
-#define MODELPATH "model.tflite"
+#define MODELPATH "perceptron/models/model_not_center.tflite"
 
 //#define QUICK_SOLUTION
 
@@ -73,12 +73,18 @@ Node *Execution::analyseState(Node *node)
         if(m[j]->to == 0 && m[j]->from == 0)
             continue;
 
+        bool boxMoved = false;
         int *new_box_array = new int[boxCount];
         for(int k = 0; k < boxCount; k++)
+        {
             if(box_array[k] == m[j]->to)
+            {
                 new_box_array[k] = 2*m[j]->to - m[j]->from;
+                boxMoved = true;
+            }
             else
                 new_box_array[k] = box_array[k];
+        }
 
         if(transpositionTable.lookup(transpositionTable.computeHash(new_box_array, m[j]->to)))
         {
@@ -96,6 +102,10 @@ Node *Execution::analyseState(Node *node)
         new_move.to = m[j]->to;
         new_move.from = m[j]->from;
 
+        int *directions = new int[4];
+        for(int i = 0; i < 4; i++)
+            directions[i] = m[i]->to - m[i]->from;
+
         Node* n = new Node;
         n->box_array = new_box_array;
         n->player_pos = m[j]->to;
@@ -105,6 +115,9 @@ Node *Execution::analyseState(Node *node)
         n->sons = std::list<Node*>();
         n->depth = node->depth+1;
         n->root = false;
+        n->directions = directions;
+        n->map = map->getFullMap(node->box_array, node->player_pos);
+        n->boxMove = boxMoved;
         node->sons.push_back(n);
 
 
@@ -117,6 +130,7 @@ Node *Execution::analyseState(Node *node)
 
         if(bound < node->lower_bound)
         {
+            //std::cout << "Analysing " << m[j]->to - m[j]->from << "\t j = " << j << std::endl;
             Node *res = analyseState(n);
             if (res != nullptr)
             {
@@ -140,8 +154,8 @@ Node *Execution::analyseState(Node *node)
                 }
             }
             openSet.push_back(n);
-            done:
-            int a;
+            done: 
+            1;
         }
     }
     for(int i = 0; i < 4; i++)
@@ -160,6 +174,10 @@ Node *Execution::execute(Node *current_node, int depth)
         if(res != nullptr)
         {
             return res;
+        }
+        else
+        {
+            //this->c++;
         }
     }
     return nullptr;

@@ -13,10 +13,10 @@
 #include "RunningMap.h"
 
 class TrainingData {
-private:
-    std::string levelFolder;
 
 public:
+    std::string levelFolder;
+
     TrainingData(std::string levelFolder);
 
     // Solve single thread
@@ -33,7 +33,7 @@ public:
     void split(int tests);
     static inline void rtrim(std::string &s);
 
-    std::string generateTrainingData(std::string &level, std::string solution, unsigned int step);
+    std::string generateTrainingData(std::string &level, std::string solution, int step);
     void gen();
     void centerPlayer();
     void combine(std::string level1, std::string level2, std::string level3, std::string out);

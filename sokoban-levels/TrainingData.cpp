@@ -307,7 +307,7 @@ void TrainingData::gen()
     std::string line, str, solution;
     std::stringstream stream;
     int level_count = 0;
-    ofile.open(this->levelFolder + "../run.txt", std::ofstream::out | std::ofstream::app);
+    ofile.open(this->levelFolder + "run.txt", std::ofstream::out | std::ofstream::app);
 
     for(int i = 4001; i < 6001; i++)
     {
@@ -358,7 +358,7 @@ void TrainingData::gen()
             ofile << std::setw(3) << std::setfill('0') << a;
             ofile << solution[a];
             ofile << '|';
-            ofile << generateTrainingData(str, solution, a);
+            ofile << generateTrainingData(str, solution, a-1);
             ofile << std::endl;
         }
         ofile << "-------------------------------------------------------" << std::endl;
@@ -368,16 +368,16 @@ void TrainingData::gen()
     std::cout << std::endl << std::endl << "Processed " << level_count << " levels" << std::endl;
 }
 
-std::string TrainingData::generateTrainingData(std::string &level, const std::string solution, unsigned int step)
+std::string TrainingData::generateTrainingData(std::string &level, const std::string solution, int step)
 {
     RunningMap rmap = RunningMap(level);
 
-    if(step > solution.length() -1)
+    if(step > 0 && step > solution.length() -1)
         return "";
 
-    std::string result(solution, step, step);
+    std::string result;
 
-    for(unsigned int i = 0; i <= step; i++)
+    for(int i = 0; i <= step; i++)
         rmap.move(solution[i]);
 
     result = rmap.getCodes();

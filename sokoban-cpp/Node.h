@@ -19,7 +19,10 @@ public:
     Move move;
     int lower_bound;
     int depth;
+    int *directions;
+    int *map;
     std::list<Node *> sons;
+    bool boxMove;
     bool root;
 
     Node(int *box_array, int player_pos, Node *farther, Move move, int lower_bound, const std::list<Node *> &sons = std::list<Node *>(), int depth = 0);

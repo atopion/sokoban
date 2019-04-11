@@ -1,4 +1,5 @@
 ARCH=linux_x86_64
+OBJ=obj
 
 CXXFLAGS=--std=c++14 -g -static -pthread
 TFLITELIB=-L./lib/$(ARCH)
@@ -12,45 +13,58 @@ ifeq ($(ARCH), armv5)
 CXX=arm-linux-gnueabi-g++
 endif
 
-all: main.o Map.o TranspositionTable.o DeadlockDetection.o Metrics.o AssignmentAlgorithms.o Execution.o Node.o hungarian/Hungarian.o AStar.o BoundAlgorithm.o perceptron/Perceptron.o
+all: $(OBJ)/main.o $(OBJ)/Map.o $(OBJ)/TranspositionTable.o $(OBJ)/DeadlockDetection.o $(OBJ)/Metrics.o $(OBJ)/AssignmentAlgorithms.o $(OBJ)/Execution.o $(OBJ)/Node.o $(OBJ)/hungarian/Hungarian.o $(OBJ)/AStar.o $(OBJ)/BoundAlgorithm.o $(OBJ)/perceptron/Perceptron.o
 	mkdir -p ./out/$(ARCH)
-	$(CXX) $(CXXFLAGS) -o ./out/$(ARCH)/SokobanSolver main.o Map.o TranspositionTable.o DeadlockDetection.o Metrics.o AssignmentAlgorithms.o Execution.o Node.o hungarian/Hungarian.o AStar.o BoundAlgorithm.o perceptron/Perceptron.o $(TFLITEINC) $(TFLITELIB) $(LDFLAGS)
+	$(CXX) $(CXXFLAGS) -o ./out/$(ARCH)/SokobanSolver $(OBJ)/main.o $(OBJ)/Map.o $(OBJ)/TranspositionTable.o $(OBJ)/DeadlockDetection.o $(OBJ)/Metrics.o $(OBJ)/AssignmentAlgorithms.o $(OBJ)/Execution.o $(OBJ)/Node.o $(OBJ)/hungarian/Hungarian.o $(OBJ)/AStar.o $(OBJ)/BoundAlgorithm.o $(OBJ)/perceptron/Perceptron.o $(TFLITEINC) $(TFLITELIB) $(LDFLAGS)
 
-main.o : main.cpp Map.h Execution.h TranspositionTable.h Node.h
-	$(CXX) $(CXXFLAGS) -c main.cpp $(TFLITEINC)
+$(OBJ)/main.o : main.cpp Map.h Execution.h TranspositionTable.h Node.h
+	mkdir -p $(OBJ)/
+	$(CXX) $(CXXFLAGS) -c main.cpp -o $(OBJ)/main.o $(TFLITEINC)
 
-Map.o : Map.cpp Map.h
-	$(CXX) $(CXXFLAGS) -c Map.cpp
+$(OBJ)/Map.o : Map.cpp Map.h
+	mkdir -p $(OBJ)/
+	$(CXX) $(CXXFLAGS) -c Map.cpp -o $(OBJ)/Map.o
 
-TranspositionTable.o : TranspositionTable.cpp TranspositionTable.h
-	$(CXX) $(CXXFLAGS) -c TranspositionTable.cpp
+$(OBJ)/TranspositionTable.o : TranspositionTable.cpp TranspositionTable.h
+	mkdir -p $(OBJ)/
+	$(CXX) $(CXXFLAGS) -c TranspositionTable.cpp -o $(OBJ)/TranspositionTable.o
 
-DeadlockDetection.o : DeadlockDetection.cpp DeadlockDetection.h
-	$(CXX) $(CXXFLAGS) -c DeadlockDetection.cpp
+$(OBJ)/DeadlockDetection.o : DeadlockDetection.cpp DeadlockDetection.h
+	mkdir -p $(OBJ)/
+	$(CXX) $(CXXFLAGS) -c DeadlockDetection.cpp -o $(OBJ)/DeadlockDetection.o
 
-Metrics.o : Metrics.cpp Metrics.h
-	$(CXX) $(CXXFLAGS) -c Metrics.cpp
+$(OBJ)/Metrics.o : Metrics.cpp Metrics.h
+	mkdir -p $(OBJ)/
+	$(CXX) $(CXXFLAGS) -c Metrics.cpp -o $(OBJ)/Metrics.o
 
-AssignmentAlgorithms.o : AssignmentAlgorithms.cpp AssignmentAlgorithms.h hungarian/Hungarian.h Metrics.h
-	$(CXX) $(CXXFLAGS) -c AssignmentAlgorithms.cpp
+$(OBJ)/AssignmentAlgorithms.o : AssignmentAlgorithms.cpp AssignmentAlgorithms.h hungarian/Hungarian.h Metrics.h
+	mkdir -p $(OBJ)/
+	$(CXX) $(CXXFLAGS) -c AssignmentAlgorithms.cpp -o $(OBJ)/AssignmentAlgorithms.o
 
-Execution.o : Execution.cpp Execution.h Node.h TranspositionTable.h Map.h AssignmentAlgorithms.h DeadlockDetection.h BoundAlgorithm.h perceptron/Perceptron.h
-	$(CXX) $(CXXFLAGS) -c Execution.cpp $(TFLITEINC)
+$(OBJ)/Execution.o : Execution.cpp Execution.h Node.h TranspositionTable.h Map.h AssignmentAlgorithms.h DeadlockDetection.h BoundAlgorithm.h perceptron/Perceptron.h
+	mkdir -p $(OBJ)/
+	$(CXX) $(CXXFLAGS) -c Execution.cpp -o $(OBJ)/Execution.o $(TFLITEINC)
 
-Node.o : Node.cpp Node.h Move.h
-	$(CXX) $(CXXFLAGS) -c Node.cpp
+$(OBJ)/Node.o : Node.cpp Node.h Move.h
+	mkdir -p $(OBJ)/
+	$(CXX) $(CXXFLAGS) -c Node.cpp -o $(OBJ)/Node.o
 
-hungarian/Hungarian.o : hungarian/Hungarian.cpp hungarian/Hungarian.h
-	$(CXX) $(CXXFLAGS) -c hungarian/Hungarian.cpp -o hungarian/Hungarian.o
+$(OBJ)/hungarian/Hungarian.o : hungarian/Hungarian.cpp hungarian/Hungarian.h
+	mkdir -p $(OBJ)/hungarian
+	$(CXX) $(CXXFLAGS) -c hungarian/Hungarian.cpp -o $(OBJ)/hungarian/Hungarian.o
 
-AStar.o : AStar.cpp AStar.h Metrics.h
-	$(CXX) $(CXXFLAGS) -c AStar.cpp
+$(OBJ)/AStar.o : AStar.cpp AStar.h Metrics.h
+	mkdir -p $(OBJ)/
+	$(CXX) $(CXXFLAGS) -c AStar.cpp -o $(OBJ)/AStar.o
 
-BoundAlgorithm.o : BoundAlgorithm.cpp BoundAlgorithm.h Metrics.h Map.h
-	$(CXX) $(CXXFLAGS) -c BoundAlgorithm.cpp
+$(OBJ)/BoundAlgorithm.o : BoundAlgorithm.cpp BoundAlgorithm.h Metrics.h Map.h
+	mkdir -p $(OBJ)/
+	$(CXX) $(CXXFLAGS) -c BoundAlgorithm.cpp -o $(OBJ)/BoundAlgorithm.o
 
-perceptron/Perceptron.o: perceptron/Perceptron.cpp perceptron/Perceptron.h
-	$(CXX) $(CXXFLAGS) -c perceptron/Perceptron.cpp -o perceptron/Perceptron.o $(TFLITEINC) $(TFLITELIB)
+$(OBJ)/perceptron/Perceptron.o: perceptron/Perceptron.cpp perceptron/Perceptron.h
+	mkdir -p $(OBJ)/perceptron
+	$(CXX) $(CXXFLAGS) -c perceptron/Perceptron.cpp -o $(OBJ)/perceptron/Perceptron.o $(TFLITEINC) $(TFLITELIB)
 
 clean:
-	rm main.o Map.o TranspositionTable.o DeadlockDetection.o Metrics.o AssignmentAlgorithms.o Execution.o Node.o hungarian/Hungarian.o AStar.o BoundAlgorithm.o perceptron/Perceptron.o
+	rm -f main.o Map.o TranspositionTable.o DeadlockDetection.o Metrics.o AssignmentAlgorithms.o Execution.o Node.o hungarian/Hungarian.o AStar.o BoundAlgorithm.o perceptron/Perceptron.o
+	rm -rf $(OBJ)/

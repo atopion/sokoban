@@ -9,15 +9,32 @@
 #include "Node.h"
 #include "Execution.h"
 
+bool correct(int direction, char result)
+{
+    int r = 0;
+    if(result == 'u' || result == 'U')
+        r = -10;
+    else if(result == 'd' || result == 'D')
+        r = 10;
+    else if(result == 'l' || result == 'L')
+        r = -1;
+    else if(result == 'r' || result == 'R')
+        r = 1;
+    else
+        return false;
+
+    return direction == r;
+}
+
 int main(int argc, char **argv) {
 
     std::ifstream file;
     std::stringstream stream;
 
 #ifdef __unix__
-    std::string path = "level/";
+    std::string path = "../sokoban-levels/";
 #elif defined(_WIN32)
-    std::string path = "C:\\Users\\atopi\\Codes\\sokoban\\sokoban-cpp\\perceptrons\\levels\\";
+    std::string path = "C:\\Users\\atopi\\Codes\\sokoban\\sokoban-levels\\";
 #endif
 
     std::string line, level, level_name, execute_command;
@@ -30,13 +47,13 @@ int main(int argc, char **argv) {
     else if(argc < 3)
     {
         level_name = std::string(argv[1]);
-        file.open(level_name);
+        file.open(path + level_name);
         std::cout << "Using " << level_name << std::endl;
     }
     else
     {
         level_name = std::string(argv[1]);
-        file.open(level_name);
+        file.open(path + level_name);
         std::cout << "Using " << level_name << std::endl;
         execute_command = std::string(argv[2]);
     }
@@ -72,7 +89,7 @@ int main(int argc, char **argv) {
         std::cout << "No solution found" << std::endl;
     else
     {
-        int i = 0;
+        int i = 0, count = 0;
         std::string result, r1;
         while(solution->farther != nullptr)
         {
@@ -81,10 +98,33 @@ int main(int argc, char **argv) {
             Move m = solution->move;
             result.insert(0, Move::str(m) + ", ");
 
-            if(x == 1) r1.insert(0, "r");
-            else if(x == -1) r1.insert(0, "l");
-            else if(x > 0) r1.insert(0, "d");
-            else if(x < 0) r1.insert(0, "u");
+            if(solution->boxMove)
+            {
+                if(x == 1) r1.insert(0, "R");
+                else if(x == -1) r1.insert(0, "L");
+                else if(x > 0) r1.insert(0, "D");
+                else if(x < 0) r1.insert(0, "U");
+            }
+            else
+            {
+                if(x == 1) r1.insert(0, "r");
+                else if(x == -1) r1.insert(0, "l");
+                else if(x > 0) r1.insert(0, "d");
+                else if(x < 0) r1.insert(0, "u");
+            }
+            
+
+            std::cout << "Result: " << r1[0] << "  Directions: " << solution->directions[0] << " " << solution->directions[1] << " " << solution->directions[2] << " " << solution->directions[3] << "  \tCorrect: " << correct(solution->directions[0], r1[0]) << std::endl;
+            if(correct(solution->directions[0], r1[0]))
+                count++;
+
+            for(int i = 0; i < 100; i++)
+            {
+                if(i % 10 == 0)
+                    std::cout << "|";
+                std::cout << solution->map[i];
+            }
+            std::cout << std::endl << std::endl;
 
             tmp = solution->farther;
             solution = tmp;
@@ -100,6 +140,7 @@ int main(int argc, char **argv) {
         std::cout << "number of examined nodes: " << exec.getPathCount() << std::endl;
         std::cout << "number of mistakes: " << exec.getSecondTryCount() << std::endl;
         std::cout << "C: " << exec.getCCount() << std::endl;
+        std::cout << "Perceptron result: " << ((double) count / (double) i) << std::endl;
 
         if(!execute_command.empty())
         {

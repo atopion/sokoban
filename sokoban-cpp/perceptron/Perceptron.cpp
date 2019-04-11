@@ -41,7 +41,7 @@ Perceptron::Perceptron(std::string modelPath)
 
 void Perceptron::invoke(int *directions, int *map, int height, int width, int player)
 {
-    int player_x = player % width;
+    /*int player_x = player % width;
     int player_y = player / width;
     std::vector<std::vector<int>> mat;
     for(int i = 0; i < 10; i++)
@@ -76,6 +76,13 @@ void Perceptron::invoke(int *directions, int *map, int height, int width, int pl
             this->input[ic] = mat[i][a];
             ic++;
         }
+    }*/
+
+    int ic = 0;
+    for(int i = 0; i < 100; i++)
+    {
+        this->input[ic] = map[i];
+        ic++;
     }
 
     interpreter->Invoke();
@@ -100,8 +107,4 @@ void Perceptron::invoke(int *directions, int *map, int height, int width, int pl
             }
         }
     }
-
-    //for(int i = 0; i < 4; i++)
-    //    std::cout << output[i] << " ";
-    //std::cout << std::endl << std::endl;
 }
