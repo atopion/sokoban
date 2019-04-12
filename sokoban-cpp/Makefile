@@ -1,4 +1,5 @@
 ARCH=linux_x86_64
+NAME=SokobanSolver
 OBJ=obj
 
 CXXFLAGS=--std=c++14 -g -static -pthread
@@ -15,7 +16,8 @@ endif
 
 all: $(OBJ)/main.o $(OBJ)/Map.o $(OBJ)/TranspositionTable.o $(OBJ)/DeadlockDetection.o $(OBJ)/Metrics.o $(OBJ)/AssignmentAlgorithms.o $(OBJ)/Execution.o $(OBJ)/Node.o $(OBJ)/hungarian/Hungarian.o $(OBJ)/AStar.o $(OBJ)/BoundAlgorithm.o $(OBJ)/perceptron/Perceptron.o
 	mkdir -p ./out/$(ARCH)
-	$(CXX) $(CXXFLAGS) -o ./out/$(ARCH)/SokobanSolver $(OBJ)/main.o $(OBJ)/Map.o $(OBJ)/TranspositionTable.o $(OBJ)/DeadlockDetection.o $(OBJ)/Metrics.o $(OBJ)/AssignmentAlgorithms.o $(OBJ)/Execution.o $(OBJ)/Node.o $(OBJ)/hungarian/Hungarian.o $(OBJ)/AStar.o $(OBJ)/BoundAlgorithm.o $(OBJ)/perceptron/Perceptron.o $(TFLITEINC) $(TFLITELIB) $(LDFLAGS)
+	$(CXX) $(CXXFLAGS) -o ./out/$(ARCH)/$(NAME) $(OBJ)/main.o $(OBJ)/Map.o $(OBJ)/TranspositionTable.o $(OBJ)/DeadlockDetection.o $(OBJ)/Metrics.o $(OBJ)/AssignmentAlgorithms.o $(OBJ)/Execution.o $(OBJ)/Node.o $(OBJ)/hungarian/Hungarian.o $(OBJ)/AStar.o $(OBJ)/BoundAlgorithm.o $(OBJ)/perceptron/Perceptron.o $(TFLITEINC) $(TFLITELIB) $(LDFLAGS)
+	ln -sf ./out/$(ARCH)/$(NAME) $(NAME)
 
 $(OBJ)/main.o : main.cpp Map.h Execution.h TranspositionTable.h Node.h
 	mkdir -p $(OBJ)/

@@ -22,7 +22,7 @@ Point BoundAlgorithm::minimum(int *array, int arraySize, std::list<int> exclude,
     {
         if(std::find(exclude.begin(), exclude.end(), array[i]) == exclude.end())
         {
-            if((_a = metrics.pull_distance(target, array[i]) < _min))
+            if((_a = metrics.pull_distance(target, array[i])) < _min)
             {
                 _min = _a;
                 _pos = array[i];

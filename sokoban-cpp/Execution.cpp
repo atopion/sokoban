@@ -127,11 +127,12 @@ Node *Execution::analyseState(Node *node)
             delete[] m;
             return n;
         }
-
+        
         if(bound < node->lower_bound)
         {
-            //std::cout << "Analysing " << m[j]->to - m[j]->from << "\t j = " << j << std::endl;
+            //std::cout << "Analysing " << m[j]->to - m[j]->from << "\t bound = " << bound << "\t Farther: " << node->lower_bound << std::endl;
             Node *res = analyseState(n);
+            //std::cout << "Result " << n << std::endl;
             if (res != nullptr)
             {
                 for(int i = 0; i < 4; i++) delete m[i];
@@ -140,11 +141,12 @@ Node *Execution::analyseState(Node *node)
             }
             else
             {
-                this->c++;
+                //this->c++;
             }
         }
         else
         {
+            //std::cout << "Direction: " << m[j]->to - m[j]->from << "\t Bound " << bound << std::endl;
             for(auto it = openSet.begin(); it != openSet.end(); it++)
             {
                 if(bound + n->depth < (*it)->lower_bound + (*it)->depth)
@@ -177,7 +179,7 @@ Node *Execution::execute(Node *current_node, int depth)
         }
         else
         {
-            //this->c++;
+            this->c++;
         }
     }
     return nullptr;

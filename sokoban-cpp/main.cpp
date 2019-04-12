@@ -40,7 +40,7 @@ int main(int argc, char **argv) {
     std::string line, level, level_name, execute_command;
     if(argc < 2)
     {
-        level_name = "level2.txt";
+        level_name = "generated-levels/level5840.txt"; //"testing-levels/level2.txt";
         file.open(path + level_name);
         std::cout << "Using " << path + level_name << std::endl;
     }
@@ -118,13 +118,13 @@ int main(int argc, char **argv) {
             if(correct(solution->directions[0], r1[0]))
                 count++;
 
-            for(int i = 0; i < 100; i++)
+            /*for(int i = 0; i < 100; i++)
             {
                 if(i % 10 == 0)
                     std::cout << "|";
                 std::cout << solution->map[i];
             }
-            std::cout << std::endl << std::endl;
+            std::cout << std::endl << std::endl;*/
 
             tmp = solution->farther;
             solution = tmp;
