@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <list>
 
-#define MODELPATH "perceptron/models/model_not_center.tflite"
+#define MODELPATH "../sokoban-cpp/perceptron/models/model_not_center.tflite"
 
 //#define QUICK_SOLUTION
 

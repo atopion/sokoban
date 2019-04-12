@@ -107,7 +107,7 @@ pthread_mutex_t lock_x;
 void TrainingData::solveThread()
 {
     inits = std::vector<int>(0);
-    for(int i = 1; i < 6001; i++)
+    for(int i = 3600; i < 6001; i++)
         inits.emplace_back(i);
     levelF = this->levelFolder;
 
@@ -160,6 +160,7 @@ void TrainingData::solveCore(int i, std::string folder)
         if(line[0] == 'u' || line[0] == 'd' || line[0] == 'l' || line[0] == 'r')
         {
             ifile.close();
+            std::cout << "Skipping file " << folder + "level" + pad + std::to_string(i) + ".txt" << std::endl;
             return;
         }
 
