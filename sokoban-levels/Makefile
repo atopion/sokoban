@@ -6,18 +6,18 @@ OBJ=obj
 CXXFLAGS=--std=c++14 -g -pthread
 TFLITELIB=-L./lib/
 TFLITEINC=-I/home/atopion/atopi/Codes/docker/tensorflow -I/home/atopion/atopi/Codes/docker/tensorflow/tensorflow/lite/tools/make/downloads/flatbuffers/include
-LDFLAGS=-lpthread
+LDFLAGS=-lpthread -ltensorflow-lite -latomic
 
-all: $(OBJ)/main.o $(OBJ)/TrainingData.o $(OBJ)/RunningMap.o $(OBJ)/Map.o $(OBJ)/TranspositionTable.o $(OBJ)/DeadlockDetection.o $(OBJ)/Metrics.o $(OBJ)/AssignmentAlgorithms.o $(OBJ)/Execution.o $(OBJ)/Node.o $(OBJ)/hungarian/Hungarian.o $(OBJ)/AStar.o $(OBJ)/BoundAlgorithm.o
-	$(CXX) $(CXXFLAGS) -o Generator $(OBJ)/main.o $(OBJ)/TrainingData.o $(OBJ)/RunningMap.o $(OBJ)/Map.o $(OBJ)/TranspositionTable.o $(OBJ)/DeadlockDetection.o $(OBJ)/Metrics.o $(OBJ)/AssignmentAlgorithms.o $(OBJ)/Execution.o $(OBJ)/Node.o $(OBJ)/hungarian/Hungarian.o $(OBJ)/AStar.o $(OBJ)/BoundAlgorithm.o $(LDFLAGS)
+all: $(OBJ)/main.o $(OBJ)/TrainingData.o $(OBJ)/RunningMap.o $(OBJ)/Map.o $(OBJ)/TranspositionTable.o $(OBJ)/DeadlockDetection.o $(OBJ)/Metrics.o $(OBJ)/AssignmentAlgorithms.o $(OBJ)/Execution.o $(OBJ)/Node.o $(OBJ)/hungarian/Hungarian.o $(OBJ)/AStar.o $(OBJ)/BoundAlgorithm.o $(OBJ)/perceptron/Perceptron.o
+	$(CXX) $(CXXFLAGS) -o Generator $(OBJ)/main.o $(OBJ)/TrainingData.o $(OBJ)/RunningMap.o $(OBJ)/Map.o $(OBJ)/TranspositionTable.o $(OBJ)/DeadlockDetection.o $(OBJ)/Metrics.o $(OBJ)/AssignmentAlgorithms.o $(OBJ)/Execution.o $(OBJ)/Node.o $(OBJ)/hungarian/Hungarian.o $(OBJ)/AStar.o $(OBJ)/BoundAlgorithm.o $(OBJ)/perceptron/Perceptron.o $(TFLITEINC) $(TFLITELIB) $(LDFLAGS)
 
 $(OBJ)/main.o : main.cpp TrainingData.h
 	mkdir -p $(OBJ)/
-	$(CXX) $(CXXFLAGS) -o $(OBJ)/main.o -c main.cpp
+	$(CXX) $(CXXFLAGS) -o $(OBJ)/main.o -c main.cpp $(TFLITEINC)
 
 $(OBJ)/TrainingData.o : TrainingData.cpp TrainingData.h RunningMap.h $(SOLVER)/Execution.h $(SOLVER)/Map.h $(SOLVER)/Node.h
 	mkdir -p $(OBJ)/
-	$(CXX) $(CXXFLAGS) -o $(OBJ)/TrainingData.o -c TrainingData.cpp
+	$(CXX) $(CXXFLAGS) -o $(OBJ)/TrainingData.o -c TrainingData.cpp $(TFLITEINC)
 
 $(OBJ)/RunningMap.o : RunningMap.cpp RunningMap.h
 	mkdir -p $(OBJ)/
@@ -43,9 +43,9 @@ $(OBJ)/AssignmentAlgorithms.o : $(SOLVER)/AssignmentAlgorithms.cpp $(SOLVER)/Ass
 	mkdir -p $(OBJ)/
 	$(CXX) $(CXXFLAGS) -o $(OBJ)/AssignmentAlgorithms.o -c $(SOLVER)/AssignmentAlgorithms.cpp
 
-$(OBJ)/Execution.o : $(SOLVER)/Execution.cpp $(SOLVER)/Execution.h $(SOLVER)/Node.h $(SOLVER)/TranspositionTable.h $(SOLVER)/Map.h $(SOLVER)/AssignmentAlgorithms.h $(SOLVER)/DeadlockDetection.h $(SOLVER)/BoundAlgorithm.h
+$(OBJ)/Execution.o : $(SOLVER)/Execution.cpp $(SOLVER)/Execution.h $(SOLVER)/Node.h $(SOLVER)/TranspositionTable.h $(SOLVER)/Map.h $(SOLVER)/AssignmentAlgorithms.h $(SOLVER)/DeadlockDetection.h $(SOLVER)/BoundAlgorithm.h $(SOLVER)/perceptron/Perceptron.h
 	mkdir -p $(OBJ)/
-	$(CXX) $(CXXFLAGS) -o $(OBJ)/Execution.o -c $(SOLVER)/Execution.cpp
+	$(CXX) $(CXXFLAGS) -o $(OBJ)/Execution.o -c $(SOLVER)/Execution.cpp $(TFLITEINC)
 
 $(OBJ)/Node.o : $(SOLVER)/Node.cpp $(SOLVER)/Node.h $(SOLVER)/Move.h
 	mkdir -p $(OBJ)/
@@ -63,9 +63,9 @@ $(OBJ)/BoundAlgorithm.o : $(SOLVER)/BoundAlgorithm.cpp $(SOLVER)/BoundAlgorithm.
 	mkdir -p $(OBJ)/
 	$(CXX) $(CXXFLAGS) -o $(OBJ)/BoundAlgorithm.o -c $(SOLVER)/BoundAlgorithm.cpp
 
-#$(OBJ)/perceptron/Perceptron.o: $(SOLVER)/perceptron/Perceptron.cpp $(SOLVER)/perceptron/Perceptron.h
-#	mkdir -p $(OBJ)/perceptron/
-#	$(CXX) $(CXXFLAGS) -c $(SOLVER)/perceptron/Perceptron.cpp -o $(OBJ)/perceptron/Perceptron.o $(TFLITEINC) $(TFLITELIB)
+$(OBJ)/perceptron/Perceptron.o: $(SOLVER)/perceptron/Perceptron.cpp $(SOLVER)/perceptron/Perceptron.h
+	mkdir -p $(OBJ)/perceptron/
+	$(CXX) $(CXXFLAGS) -c $(SOLVER)/perceptron/Perceptron.cpp -o $(OBJ)/perceptron/Perceptron.o $(TFLITEINC) $(TFLITELIB)
 
 clean:
 	rm -r $(OBJ)/

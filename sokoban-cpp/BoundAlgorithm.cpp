@@ -56,9 +56,11 @@ int BoundAlgorithm::greedyBound(int *boxArray, int pos)
     }
 
     Point x = {0, 0}, y = {pos, 0};
+    //Point x = {pos, 0}, y = {0, 0};
 
     for(int i = 0; i < boxCount - b; i++)
     {
+        //y = minimum(targets, targetCount, matchedTargets, x.p);
         x = minimum(boxArray, boxCount, matchedBoxes, y.p);
         y = minimum(targets, targetCount, matchedTargets, x.p);
         matchedBoxes.push_front(x.p);
@@ -70,7 +72,8 @@ int BoundAlgorithm::greedyBound(int *boxArray, int pos)
             break;
         }
         else
-            distance_sum += x.m + 2*y.m;
+            distance_sum += 2*x.m + 4*y.m;
+            //distance_sum += x.m + y.m;
     }
 
     return distance_sum;

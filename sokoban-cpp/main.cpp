@@ -66,6 +66,7 @@ int main(int argc, char **argv) {
     if(level.empty())
     {
         std::cout << "Level string empty. File not found. Exit" << std::endl;
+        exit(1);
     }
 
     std::chrono::high_resolution_clock::time_point start = std::chrono::high_resolution_clock::now();

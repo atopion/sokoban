@@ -34,11 +34,11 @@ void TrainingData::split(int tests)
 
     int count = 0;
 
-    ifile.open(this->levelFolder + "run_centered.txt", std::istream::in);
+    ifile.open(this->levelFolder + "run-complete.txt", std::istream::in);
     if(!ifile.is_open()) return;
 
-    ofile_test.open(this->levelFolder + "run_centered_test.txt", std::ostream::out);
-    ofile_train.open(this->levelFolder + "run_centered_train.txt", std::ostream::out);
+    ofile_test.open(this->levelFolder + "run-complete-test.txt", std::ostream::out);
+    ofile_train.open(this->levelFolder + "run_complete-train.txt", std::ostream::out);
 
     while( getline(ifile, line) )
     {
@@ -63,11 +63,11 @@ void TrainingData::split(int tests)
 
     count = 0;
 
-    ifile.open(this->levelFolder + "../run_centered.txt", std::istream::in);
+    ifile.open(this->levelFolder + "run-complete-centered.txt", std::istream::in);
     if(!ifile.is_open()) return;
 
-    ofile_test.open(this->levelFolder + "../run_centered_test.txt", std::ostream::out);
-    ofile_train.open(this->levelFolder + "../run_centered_train.txt", std::ostream::out);
+    ofile_test.open(this->levelFolder + "run-complete-centered-test.txt", std::ostream::out);
+    ofile_train.open(this->levelFolder + "run-complete-centered-train.txt", std::ostream::out);
 
     while( getline(ifile, line) )
     {
@@ -93,7 +93,7 @@ void TrainingData::split(int tests)
 
 void TrainingData::solve()
 {
-    for(int i = 1; i < 2001; i++)
+    for(int i = 1; i < 6001; i++)
     {
         solveCore(i, this->levelFolder);
     }
@@ -107,7 +107,7 @@ pthread_mutex_t lock_x;
 void TrainingData::solveThread()
 {
     inits = std::vector<int>(0);
-    for(int i = 1; i < 2001; i++)
+    for(int i = 1; i < 6001; i++)
         inits.emplace_back(i);
     levelF = this->levelFolder;
 
@@ -158,7 +158,10 @@ void TrainingData::solveCore(int i, std::string folder)
     while ( getline (ifile, line) )
     {
         if(line[0] == 'u' || line[0] == 'd' || line[0] == 'l' || line[0] == 'r')
+        {
+            ifile.close();
             return;
+        }
 
         if(!line.empty())
             stream << line << '\n';
@@ -307,9 +310,9 @@ void TrainingData::gen()
     std::string line, str, solution;
     std::stringstream stream;
     int level_count = 0;
-    ofile.open(this->levelFolder + "run.txt", std::ofstream::out | std::ofstream::app);
+    ofile.open(this->levelFolder + "run-complete.txt", std::ofstream::out | std::ofstream::app);
 
-    for(int i = 2001; i < 6001; i++)
+    for(int i = 1; i < 6001; i++)
     {
         std::string pad = (i < 10 ? "000" : (i < 100 ? "00" : (i < 1000 ? "0" : "")));
 
@@ -391,8 +394,8 @@ void TrainingData::centerPlayer()
     std::ofstream ofile;
     std::string line, str, solution;
     std::stringstream stream;
-    ifile.open(this->levelFolder + "run.txt");
-    ofile.open(this->levelFolder + "run_centered.txt", std::ofstream::out | std::ofstream::app);
+    ifile.open(this->levelFolder + "run-complete.txt");
+    ofile.open(this->levelFolder + "run-complete-centered.txt", std::ofstream::out | std::ofstream::app);
 
     if(ifile.peek() == std::ifstream::traits_type::eof())
     {

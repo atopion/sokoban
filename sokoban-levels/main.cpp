@@ -3,5 +3,8 @@
 int main(int argc, char **argv)
 {
     TrainingData data("/home/atopion/atopi/Codes/sokoban/sokoban-levels/solved-levels/");
-    data.split(250);
+    data.solveThread();
+    data.gen();
+    data.centerPlayer();
+    data.split(500);
 }
