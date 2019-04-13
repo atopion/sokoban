@@ -17,6 +17,7 @@ class BoundAlgorithm
 {
 private:
     int *targets;
+    int *map;
     int  targetCount;
     int  boxCount;
 
@@ -27,6 +28,8 @@ public:
     explicit BoundAlgorithm(Map *map);
     int greedyBound(int* boxArray, int pos);
     Point minimum(int *array, int arraySize, std::list<int> exclude, int target);
+    int boxPath(int box, int target);
+    int targetPath(int target, int box);
 };
 
 

@@ -15,6 +15,7 @@ private:
 
     int *target_codes;
     int **distance_to_goals;
+    //int **box_move_distance_to_goals;
 
 public:
     Metrics(int width, int height, int *targets, int targets_count, int* clearedBoard);

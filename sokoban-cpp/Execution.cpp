@@ -46,8 +46,8 @@ Move** Execution::possibleMoves(int pos, int *box_array)
 
     int i = 0;
     int directions[] = {-width, width, -1, 1};
-    //this->perceptron.invoke(directions, map->getFullMap(box_array, pos), map->getHeight(), map->getWidth(), pos);
-    std::random_shuffle(&directions[0], &directions[3]);
+    this->perceptron.invoke(directions, map->getFullMap(box_array, pos), map->getHeight(), map->getWidth(), pos);
+    //std::random_shuffle(&directions[0], &directions[3]);
     for(int a : directions)
     {
         if(clearedMap[pos + a] != 4 && pos >= 0 && pos < size && !(cont(box_array, boxCount, pos + a) != -1 &&

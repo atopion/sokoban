@@ -115,9 +115,10 @@ int main(int argc, char **argv) {
             }
             
 
-            std::cout << "Result: " << r1[0] << "  Directions: " << solution->directions[0] << " " << solution->directions[1] << " " << solution->directions[2] << " " << solution->directions[3] << "  \tCorrect: " << correct(solution->directions[0], r1[0]) << std::endl;
-            if(correct(solution->directions[0], r1[0]))
-                count++;
+            //std::cout << "Result: " << r1[0] << "  Directions: " << solution->directions[0] << " " << solution->directions[1] << " " << solution->directions[2] << " " << solution->directions[3] << "  \tCorrect: " << correct(solution->directions[0], r1[0]) << std::endl;
+            //if(correct(solution->directions[0], r1[0]))
+            //    count++;
+            std::cout << "Bound: " << solution->lower_bound << std::endl;
 
             /*for(int i = 0; i < 100; i++)
             {

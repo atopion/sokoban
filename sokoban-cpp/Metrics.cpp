@@ -16,11 +16,16 @@ Metrics::Metrics(int width, int height, int *targets, int targets_count, int *cl
     Metrics::target_codes = new int[targets_count];
 
     Metrics::distance_to_goals = new int*[size];
+    //Metrics::box_move_distance_to_goals = new int*[size];
     for(int i = 0; i < size; i++)
     {
         Metrics::distance_to_goals[i] = new int[size];
+        //Metrics::box_move_distance_to_goals[i] = new int[size];
         for(int j = 0; j < size; j++)
+        {
             Metrics::distance_to_goals[i][j] = 32000;
+            //Metrics::box_move_distance_to_goals[i][j] = 32000;
+        }
     }
 
     /*std::queue<int> target_queue = std::queue<int>();
@@ -51,6 +56,7 @@ Metrics::Metrics(int width, int height, int *targets, int targets_count, int *cl
     for(int i = 0; i < size; i++)
     {
         distance_to_goals[i][i] = 0;
+        //box_move_distance_to_goals[i][i] = 0;
         mqueue.push(i);
 
         while(!mqueue.empty())
@@ -62,6 +68,11 @@ Metrics::Metrics(int width, int height, int *targets, int targets_count, int *cl
                 if(player_pos < 0 || player_pos >= size)
                     continue;
                 if(distance_to_goals[i][player_pos] == 32000 && clearedBoard[player_pos] != 4)
+                {
+                    distance_to_goals[i][player_pos] = distance_to_goals[i][position] +1;
+                    mqueue.push(player_pos);
+                }
+                else if(distance_to_goals[i][player_pos] > distance_to_goals[i][position] +1 && clearedBoard[player_pos] != 4)
                 {
                     distance_to_goals[i][player_pos] = distance_to_goals[i][position] +1;
                     mqueue.push(player_pos);
