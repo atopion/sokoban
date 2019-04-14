@@ -24,10 +24,7 @@ boundAlgorithms(map), perceptron(MODELPATH)
     Execution::openSet = std::list<Node *>();
 
     Execution::transpositionTable.insert(transpositionTable.computeHash(map->getBoxArray(), map->getPlayer()));
-    Execution::PathCount = 0;
-    Execution::secondTryCount = 0;
     Execution::b = true;
-    Execution::c = 0;
 }
 
 int Execution::cont(int *array, int size, int item)
@@ -93,18 +90,11 @@ Node *Execution::analyseState(Node *node)
         }
 
         transpositionTable.insert(transpositionTable.computeHash(new_box_array, m[j]->to));
-        PathCount++;
-        if(j != 0)
-            secondTryCount++;
 
         int bound = boundAlgorithms.greedyBound(new_box_array, m[j]->to);
         Move new_move;
         new_move.to = m[j]->to;
         new_move.from = m[j]->from;
-
-        //int *directions = new int[4];
-        //for(int i = 0; i < 4; i++)
-        //    directions[i] = m[i]->to - m[i]->from;
 
         Node* n = new Node;
         n->box_array = new_box_array;
@@ -115,8 +105,6 @@ Node *Execution::analyseState(Node *node)
         n->sons = std::list<Node*>();
         n->depth = node->depth+1;
         n->root = false;
-        //n->directions = directions;
-        //n->map = map->getFullMap(node->box_array, node->player_pos);
         n->boxMove = boxMoved;
         node->sons.push_back(n);
 
@@ -130,23 +118,16 @@ Node *Execution::analyseState(Node *node)
         
         if(bound < node->lower_bound)
         {
-            //std::cout << "Analysing " << m[j]->to - m[j]->from << "\t bound = " << bound << "\t Farther: " << node->lower_bound << std::endl;
             Node *res = analyseState(n);
-            //std::cout << "Result " << n << std::endl;
             if (res != nullptr)
             {
                 for(int i = 0; i < 4; i++) delete m[i];
                 delete[] m;
                 return res;
             }
-            else
-            {
-                //this->c++;
-            }
         }
         else
         {
-            //std::cout << "Direction: " << m[j]->to - m[j]->from << "\t Bound " << bound << std::endl;
             for(auto it = openSet.begin(); it != openSet.end(); it++)
             {
                 if(bound + n->depth < (*it)->lower_bound + (*it)->depth)
@@ -176,10 +157,6 @@ Node *Execution::execute(Node *current_node, int depth)
         if(res != nullptr)
         {
             return res;
-        }
-        else
-        {
-            this->c++;
         }
     }
     return nullptr;

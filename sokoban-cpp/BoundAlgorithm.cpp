@@ -72,14 +72,14 @@ int BoundAlgorithm::greedyBound(int *boxArray, int pos)
             break;
         }
 
-        b = boxPath(y.p, x.p);
-        t = targetPath(y.p, b);
-        t = metrics.pull_distance(y.p, b);
-        b = metrics.pull_distance(b, p);
+        //b = boxPath(y.p, x.p);
+        //t = targetPath(y.p, b);
+        //t = metrics.pull_distance(y.p, b);
+        //b = metrics.pull_distance(b, p);
 
         //distance_sum += 2*x.m + 4*y.m;
-        //distance_sum += x.m + (int)(2.131814 * y.m);
-        distance_sum += b + (int)(2.131814 * t);
+        distance_sum += x.m + (int)(2.131814 * y.m);
+        //distance_sum += b + (int)(2.131814 * t);
     }
 
     return distance_sum;

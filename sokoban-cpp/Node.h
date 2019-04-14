@@ -19,8 +19,6 @@ public:
     Move move;
     int lower_bound;
     int depth;
-    int *directions;
-    int *map;
     std::list<Node *> sons;
     bool boxMove;
     bool root;

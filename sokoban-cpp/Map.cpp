@@ -118,7 +118,6 @@ void Map::mapProduction()
         }
     }
     this->width = max -1;
-    //std::cout << "Width: " << width << std::endl;
     this->size = j;
     this->height = size / this->width;
 

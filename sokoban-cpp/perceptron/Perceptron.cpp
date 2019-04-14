@@ -78,12 +78,6 @@ void Perceptron::invoke(int *directions, int *map, int height, int width, int pl
         }
     }
 
-    /*int ic = 0;
-    for(int i = 0; i < 100; i++)
-    {
-        this->input[ic] = map[i];
-        ic++;
-    }*/
     delete[] map;
 
     interpreter->Invoke();

@@ -113,20 +113,6 @@ int main(int argc, char **argv) {
                 else if(x > 0) r1.insert(0, "d");
                 else if(x < 0) r1.insert(0, "u");
             }
-            
-
-            //std::cout << "Result: " << r1[0] << "  Directions: " << solution->directions[0] << " " << solution->directions[1] << " " << solution->directions[2] << " " << solution->directions[3] << "  \tCorrect: " << correct(solution->directions[0], r1[0]) << std::endl;
-            //if(correct(solution->directions[0], r1[0]))
-            //    count++;
-            std::cout << "Bound: " << solution->lower_bound << std::endl;
-
-            /*for(int i = 0; i < 100; i++)
-            {
-                if(i % 10 == 0)
-                    std::cout << "|";
-                std::cout << solution->map[i];
-            }
-            std::cout << std::endl << std::endl;*/
 
             tmp = solution->farther;
             solution = tmp;
@@ -139,9 +125,6 @@ int main(int argc, char **argv) {
         std::cout << "Path: " << r1 << std::endl;
         std::cout << std::endl;
         std::cout << "result path length: " << i << std::endl;
-        std::cout << "number of examined nodes: " << exec.getPathCount() << std::endl;
-        std::cout << "number of mistakes: " << exec.getSecondTryCount() << std::endl;
-        std::cout << "C: " << exec.getCCount() << std::endl;
         std::cout << "Perceptron result: " << ((double) count / (double) i) << std::endl;
 
         if(!execute_command.empty())

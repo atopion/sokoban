@@ -29,7 +29,6 @@ private:
     int PathCount;
     int secondTryCount;
     bool b;
-    int c;
 
     TranspositionTable transpositionTable;
     AssignmentAlgorithms assignmentAlgorithms;
@@ -48,9 +47,6 @@ public:
 
     //DEBUG
     void printDeadlockMap();
-    int getPathCount() { return PathCount; }
-    int getSecondTryCount() { return secondTryCount; }
-    int getCCount() { return c; }
 };
 
 #endif //SOKOBANSOLVER_EXECUTION_H

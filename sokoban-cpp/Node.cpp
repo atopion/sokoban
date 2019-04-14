@@ -8,12 +8,6 @@
 
 Node::~Node()
 {
-    /*std::list<Node *>::iterator it;
-    for(it = sons.begin(); it != sons.end(); )
-    {
-        //delete *it;
-        it = sons.erase(it);
-    }*/
     for(auto && son : sons)
     {
         if(son != nullptr)
@@ -28,11 +22,6 @@ Node::~Node()
         delete[] this->box_array;
         this->box_array = nullptr;
     }
-    if(this->directions != nullptr)
-    {
-        delete[] this->directions;
-        this->directions = nullptr;
-    }
 }
 
 Node::Node()
@@ -44,7 +33,6 @@ Node::Node()
     Node::lower_bound = 1000000;
     Node::sons = std::list<Node *>();
     Node::depth = 0;
-    Node::directions = nullptr;
     Node::boxMove = false,
     Node::root = false;
     Node::next = nullptr;
@@ -59,7 +47,6 @@ Node::Node(int *box_array, int player_pos, Node *farther, Move move, int lower_b
     Node::lower_bound = lower_bound;
     Node::sons = sons;
     Node::depth = depth;
-    Node::directions = nullptr;
     Node::boxMove = false;
     Node::root = false;
 
@@ -76,7 +63,6 @@ Node::Node(int *box_array, int player_pos, int lower_bound, bool root)
     Node::lower_bound = lower_bound;
     Node::sons = std::list<Node *>();
     Node::depth = 0;
-    Node::directions = nullptr;
     Node::boxMove = false;
     Node::root = root;
 
