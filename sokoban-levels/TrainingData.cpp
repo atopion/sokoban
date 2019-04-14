@@ -34,11 +34,11 @@ void TrainingData::split(int tests)
 
     int count = 0;
 
-    ifile.open(this->levelFolder + "run-complete.txt", std::istream::in);
+    ifile.open(this->levelFolder + "run-medium.txt", std::istream::in);
     if(!ifile.is_open()) return;
 
-    ofile_test.open(this->levelFolder + "run-complete-test.txt", std::ostream::out);
-    ofile_train.open(this->levelFolder + "run_complete-train.txt", std::ostream::out);
+    ofile_test.open(this->levelFolder + "run-medium-test.txt", std::ostream::out);
+    ofile_train.open(this->levelFolder + "run-medium-train.txt", std::ostream::out);
 
     while( getline(ifile, line) )
     {
@@ -63,11 +63,11 @@ void TrainingData::split(int tests)
 
     count = 0;
 
-    ifile.open(this->levelFolder + "run-complete-centered.txt", std::istream::in);
+    ifile.open(this->levelFolder + "run-medium-centered.txt", std::istream::in);
     if(!ifile.is_open()) return;
 
-    ofile_test.open(this->levelFolder + "run-complete-centered-test.txt", std::ostream::out);
-    ofile_train.open(this->levelFolder + "run-complete-centered-train.txt", std::ostream::out);
+    ofile_test.open(this->levelFolder + "run-medium-centered-test.txt", std::ostream::out);
+    ofile_train.open(this->levelFolder + "run-medium-centered-train.txt", std::ostream::out);
 
     while( getline(ifile, line) )
     {
@@ -311,9 +311,9 @@ void TrainingData::gen()
     std::string line, str, solution;
     std::stringstream stream;
     int level_count = 0;
-    ofile.open(this->levelFolder + "run-complete.txt", std::ofstream::out | std::ofstream::app);
+    ofile.open(this->levelFolder + "run-medium.txt", std::ofstream::out | std::ofstream::app);
 
-    for(int i = 1; i < 6001; i++)
+    for(int i = 2001; i < 6001; i++)
     {
         std::string pad = (i < 10 ? "000" : (i < 100 ? "00" : (i < 1000 ? "0" : "")));
 
@@ -395,8 +395,8 @@ void TrainingData::centerPlayer()
     std::ofstream ofile;
     std::string line, str, solution;
     std::stringstream stream;
-    ifile.open(this->levelFolder + "run-complete.txt");
-    ofile.open(this->levelFolder + "run-complete-centered.txt", std::ofstream::out | std::ofstream::app);
+    ifile.open(this->levelFolder + "run-medium.txt");
+    ofile.open(this->levelFolder + "run-medium-centered.txt", std::ofstream::out | std::ofstream::app);
 
     if(ifile.peek() == std::ifstream::traits_type::eof())
     {

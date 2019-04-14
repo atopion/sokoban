@@ -74,6 +74,7 @@ int BoundAlgorithm::greedyBound(int *boxArray, int pos)
 
         b = boxPath(y.p, x.p);
         t = targetPath(y.p, b);
+        t = metrics.pull_distance(y.p, b);
         b = metrics.pull_distance(b, p);
 
         //distance_sum += 2*x.m + 4*y.m;

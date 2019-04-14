@@ -35,6 +35,21 @@ Node::~Node()
     }
 }
 
+Node::Node()
+{
+    Node::box_array = nullptr;
+    Node::player_pos = 0;
+    Node::farther = nullptr;
+    Node::move = {-1, -1};
+    Node::lower_bound = 1000000;
+    Node::sons = std::list<Node *>();
+    Node::depth = 0;
+    Node::directions = nullptr;
+    Node::boxMove = false,
+    Node::root = false;
+    Node::next = nullptr;
+}
+
 Node::Node(int *box_array, int player_pos, Node *farther, Move move, int lower_bound, const std::list<Node *> &sons, int depth)
 {
     Node::box_array = box_array;
@@ -44,6 +59,7 @@ Node::Node(int *box_array, int player_pos, Node *farther, Move move, int lower_b
     Node::lower_bound = lower_bound;
     Node::sons = sons;
     Node::depth = depth;
+    Node::directions = nullptr;
     Node::boxMove = false;
     Node::root = false;
 
@@ -60,10 +76,9 @@ Node::Node(int *box_array, int player_pos, int lower_bound, bool root)
     Node::lower_bound = lower_bound;
     Node::sons = std::list<Node *>();
     Node::depth = 0;
+    Node::directions = nullptr;
     Node::boxMove = false;
     Node::root = root;
 
     Node::next = nullptr;
 }
-
-Node::Node() = default;

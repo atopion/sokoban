@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <list>
 
-#define MODELPATH "../sokoban-cpp/perceptron/models/model_not_center.tflite"
+#define MODELPATH "../sokoban-cpp/perceptron/models/model-center.tflite"
 
 //#define QUICK_SOLUTION
 
@@ -46,8 +46,8 @@ Move** Execution::possibleMoves(int pos, int *box_array)
 
     int i = 0;
     int directions[] = {-width, width, -1, 1};
-    this->perceptron.invoke(directions, map->getFullMap(box_array, pos), map->getHeight(), map->getWidth(), pos);
-    //std::random_shuffle(&directions[0], &directions[3]);
+    //this->perceptron.invoke(directions, map->getFullMap(box_array, pos), map->getHeight(), map->getWidth(), pos);
+    std::random_shuffle(&directions[0], &directions[3]);
     for(int a : directions)
     {
         if(clearedMap[pos + a] != 4 && pos >= 0 && pos < size && !(cont(box_array, boxCount, pos + a) != -1 &&
@@ -102,9 +102,9 @@ Node *Execution::analyseState(Node *node)
         new_move.to = m[j]->to;
         new_move.from = m[j]->from;
 
-        int *directions = new int[4];
-        for(int i = 0; i < 4; i++)
-            directions[i] = m[i]->to - m[i]->from;
+        //int *directions = new int[4];
+        //for(int i = 0; i < 4; i++)
+        //    directions[i] = m[i]->to - m[i]->from;
 
         Node* n = new Node;
         n->box_array = new_box_array;
@@ -115,8 +115,8 @@ Node *Execution::analyseState(Node *node)
         n->sons = std::list<Node*>();
         n->depth = node->depth+1;
         n->root = false;
-        n->directions = directions;
-        n->map = map->getFullMap(node->box_array, node->player_pos);
+        //n->directions = directions;
+        //n->map = map->getFullMap(node->box_array, node->player_pos);
         n->boxMove = boxMoved;
         node->sons.push_back(n);
 

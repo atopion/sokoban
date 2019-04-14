@@ -8,10 +8,10 @@ TFLITELIB=-L./lib/
 TFLITEINC=-I/home/atopion/atopi/Codes/docker/tensorflow -I/home/atopion/atopi/Codes/docker/tensorflow/tensorflow/lite/tools/make/downloads/flatbuffers/include
 LDFLAGS=-lpthread -ltensorflow-lite -latomic
 
-all: $(OBJ)/main.o $(OBJ)/TrainingData.o $(OBJ)/RunningMap.o $(OBJ)/Map.o $(OBJ)/TranspositionTable.o $(OBJ)/DeadlockDetection.o $(OBJ)/Metrics.o $(OBJ)/AssignmentAlgorithms.o $(OBJ)/Execution.o $(OBJ)/Node.o $(OBJ)/hungarian/Hungarian.o $(OBJ)/AStar.o $(OBJ)/BoundAlgorithm.o $(OBJ)/perceptron/Perceptron.o
-	$(CXX) $(CXXFLAGS) -o Generator $(OBJ)/main.o $(OBJ)/TrainingData.o $(OBJ)/RunningMap.o $(OBJ)/Map.o $(OBJ)/TranspositionTable.o $(OBJ)/DeadlockDetection.o $(OBJ)/Metrics.o $(OBJ)/AssignmentAlgorithms.o $(OBJ)/Execution.o $(OBJ)/Node.o $(OBJ)/hungarian/Hungarian.o $(OBJ)/AStar.o $(OBJ)/BoundAlgorithm.o $(OBJ)/perceptron/Perceptron.o $(TFLITEINC) $(TFLITELIB) $(LDFLAGS)
+all: $(OBJ)/main.o $(OBJ)/TrainingData.o $(OBJ)/RunningMap.o $(OBJ)/Map.o $(OBJ)/TranspositionTable.o $(OBJ)/DeadlockDetection.o $(OBJ)/Metrics.o $(OBJ)/AssignmentAlgorithms.o $(OBJ)/Execution.o $(OBJ)/Node.o $(OBJ)/hungarian/Hungarian.o $(OBJ)/AStar.o $(OBJ)/BoundAlgorithm.o $(OBJ)/perceptron/Perceptron.o $(OBJ)/Heuristik.o
+	$(CXX) $(CXXFLAGS) -o Generator $(OBJ)/main.o $(OBJ)/TrainingData.o $(OBJ)/RunningMap.o $(OBJ)/Map.o $(OBJ)/TranspositionTable.o $(OBJ)/DeadlockDetection.o $(OBJ)/Metrics.o $(OBJ)/AssignmentAlgorithms.o $(OBJ)/Execution.o $(OBJ)/Node.o $(OBJ)/hungarian/Hungarian.o $(OBJ)/AStar.o $(OBJ)/BoundAlgorithm.o $(OBJ)/perceptron/Perceptron.o $(OBJ)/Heuristik.o $(TFLITEINC) $(TFLITELIB) $(LDFLAGS)
 
-$(OBJ)/main.o : main.cpp TrainingData.h
+$(OBJ)/main.o : main.cpp TrainingData.h Heuristik.h
 	mkdir -p $(OBJ)/
 	$(CXX) $(CXXFLAGS) -o $(OBJ)/main.o -c main.cpp $(TFLITEINC)
 
@@ -66,6 +66,10 @@ $(OBJ)/BoundAlgorithm.o : $(SOLVER)/BoundAlgorithm.cpp $(SOLVER)/BoundAlgorithm.
 $(OBJ)/perceptron/Perceptron.o: $(SOLVER)/perceptron/Perceptron.cpp $(SOLVER)/perceptron/Perceptron.h
 	mkdir -p $(OBJ)/perceptron/
 	$(CXX) $(CXXFLAGS) -c $(SOLVER)/perceptron/Perceptron.cpp -o $(OBJ)/perceptron/Perceptron.o $(TFLITEINC) $(TFLITELIB)
+
+$(OBJ)/Heuristik.o: Heuristik.cpp Heuristik.h $(SOLVER)/Map.h $(SOLVER)/Node.h $(SOLVER)/Execution.h
+	mkdir -p $(OBJ)/
+	$(CXX) $(CXXFLAGS) -o $(OBJ)/Heuristik.o -c Heuristik.cpp $(TFLITEINC)
 
 clean:
 	rm -r $(OBJ)/
